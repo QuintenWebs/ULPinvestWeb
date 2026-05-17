@@ -16,12 +16,11 @@ export default function Footer() {
           {/* Brand column */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div
-                className="w-10 h-10 rounded-sm flex items-center justify-center font-bold text-sm"
-                style={{ background: "oklch(0.72 0.16 75)", color: "oklch(0.12 0.055 250)" }}
-              >
-                ULP
-              </div>
+              <img
+                src="https://www.ubuntuleadershipprogram.nl/wp-content/uploads/2025/04/ULPLOGO-2.png"
+                alt="ULP Logo"
+                className="h-12 w-auto"
+              />
               <span
                 className="text-xl font-bold"
                 style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
