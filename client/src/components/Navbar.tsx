@@ -39,6 +39,7 @@ export default function Navbar() {
               src="https://www.ubuntuleadershipprogram.nl/wp-content/uploads/2025/04/ULPLOGO-2.png"
               alt="ULP Logo"
               className="h-10 w-auto"
+              style={{ filter: "brightness(0) invert(1)" }}
             />
             <div className="flex flex-col leading-tight hidden sm:block">
               <span className="font-bold text-base tracking-wide" style={{ color: "oklch(0.95 0.01 250)", fontFamily: "'Fraunces', serif" }}>
