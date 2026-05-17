@@ -6,7 +6,7 @@ import { ArrowRight, TrendingUp, Globe, Heart, Users, AlertTriangle, Plane } fro
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const INVESTORS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/investors-handshake-ZCJtYcdbQEswhB9Q59UzCZ.webp";
+const INVESTORS_IMG = "/manus-storage/PHOTO-2025-02-19-08-50-49_e73995aa.jpg";
 
 export default function Investors() {
   const { t } = useLanguage();

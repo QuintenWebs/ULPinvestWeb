@@ -121,7 +121,7 @@ export default function About() {
                     className="absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-bold"
                     style={{ background: "oklch(0.72 0.16 75)", color: "oklch(0.14 0.06 250)" }}
                   >
-                    Dit zijn wij
+                    {t("about.pillar.active")}
                   </div>
                 )}
                 <div className="text-3xl mb-4">{pillar.icon}</div>
@@ -269,7 +269,7 @@ export default function About() {
             style={{ background: "oklch(0.26 0.055 250 / 0.5)", border: "1px dashed oklch(1 0 0 / 15%)" }}
           >
             <p className="text-sm" style={{ color: "oklch(0.55 0.03 250)" }}>
-              + 3 {t("about.team.label").toLowerCase()} - {t("footer.contact").toLowerCase()} {t("footer.about").toLowerCase()}.
+              {t("about.team.more")}
             </p>
           </div>
         </div>

@@ -16,6 +16,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.about": "Over Ons",
     "nav.contact": "Contact",
     "nav.tagline": "Kleine lening. Grote impact.",
+    "nav.home": "Home",
 
     // Home / Hero
     "home.hero.label": "Usambara Mountains, Tanzania",
@@ -161,7 +162,9 @@ const translations: Record<Language, Record<string, string>> = {
     "about.ulp.link": "Bezoek ubuntuleadershipprogram.nl",
 
     "about.team.label": "Ons Team",
+    "about.team.more": "+ 3 teamleden - profielen volgen binnenkort.",
     "about.team.title": "De mensen achter ULP Invest",
+    "about.pillar.active": "Dit zijn wij",
     "about.team.theo.name": "Theo van Stuijvenberg",
     "about.team.theo.role": "Fondsbeheerder ULP Invest",
     "about.team.theo.bio": "Theo is fondsbeheerder van ULP Invest en aanspreekpunt voor investeerders. Hij is verantwoordelijk voor het beheer van het investeringsfonds, communicatie met investeerders en de financiële monitoring van investeringen.",
@@ -200,6 +203,7 @@ const translations: Record<Language, Record<string, string>> = {
     "invest.how": "Hoe kunt u bijdragen?",
     "invest.three_ways": "Drie manieren van investeren",
     "invest.contact": "Neem contact op",
+    "home": "Home",
   },
 
   en: {
@@ -208,6 +212,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.about": "About Us",
     "nav.contact": "Contact",
     "nav.tagline": "Small loan. Big impact.",
+    "nav.home": "Home",
 
     "home.hero.label": "Usambara Mountains, Tanzania",
     "home.hero.title": "Small loans,\nbig opportunities.",
@@ -345,7 +350,9 @@ const translations: Record<Language, Record<string, string>> = {
     "about.ulp.link": "Visit ubuntuleadershipprogram.nl",
 
     "about.team.label": "Our Team",
+    "about.team.more": "+ 3 team members - profiles coming soon.",
     "about.team.title": "The people behind ULP Invest",
+    "about.pillar.active": "This is us",
     "about.team.theo.name": "Theo van Stuijvenberg",
     "about.team.theo.role": "Fund Manager ULP Invest",
     "about.team.theo.bio": "Theo is fund manager of ULP Invest and the point of contact for investors. He is responsible for managing the investment fund, communicating with investors and financial monitoring of investments.",
@@ -382,6 +389,7 @@ const translations: Record<Language, Record<string, string>> = {
     "invest.how": "How can you contribute?",
     "invest.three_ways": "Three ways to invest",
     "invest.contact": "Get in touch",
+    "home": "Home",
   },
 
   sw: {
@@ -389,6 +397,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.investors": "Kwa Wawekezaji",
     "nav.about": "Kuhusu Sisi",
     "nav.contact": "Wasiliana",
+    "nav.home": "Nyumbani",
     "nav.tagline": "Mkopo mdogo. Athari kubwa.",
 
     "home.hero.label": "Milima ya Usambara, Tanzania",
@@ -527,7 +536,9 @@ const translations: Record<Language, Record<string, string>> = {
     "about.ulp.link": "Tembelea ubuntuleadershipprogram.nl",
 
     "about.team.label": "Timu Yetu",
+    "about.team.more": "+ wanachama 3 wa timu - wasifu unakuja hivi karibuni.",
     "about.team.title": "Watu nyuma ya ULP Invest",
+    "about.pillar.active": "Hii ni sisi",
     "about.team.theo.name": "Theo van Stuijvenberg",
     "about.team.theo.role": "Msimamizi wa Mfuko wa ULP Invest",
     "about.team.theo.bio": "Theo ni msimamizi wa mfuko wa ULP Invest na mtu wa kuwasiliana naye kwa wawekezaji. Anawajibika kwa usimamizi wa mfuko wa uwekezaji, mawasiliano na wawekezaji na ufuatiliaji wa fedha.",
@@ -564,6 +575,7 @@ const translations: Record<Language, Record<string, string>> = {
     "invest.how": "Unaweza kuchangia vipi?",
     "invest.three_ways": "Njia tatu za kuwekeza",
     "invest.contact": "Wasiliana nasi",
+    "home": "Nyumbani",
   },
 };
 
