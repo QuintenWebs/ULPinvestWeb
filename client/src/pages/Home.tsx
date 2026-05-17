@@ -8,7 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/hero-usambara-SLyqoHMyyESP8GyuTWMNBM.webp";
-const ENTREPRENEUR_IMG = "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80";
+const ENTREPRENEUR_IMG = "/images/coaching.jpg";
 const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/usambara-landscape-TxKRukdrenTyPFKVocwUJb.webp";
 
 export default function Home() {
@@ -20,19 +20,19 @@ export default function Home() {
       key: "case1",
       icon: "🪵",
       investment: "€2.500",
-      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80",
+      image: "/images/woodworking.jpg",
     },
     {
       key: "case2",
       icon: "🏡",
       investment: "€3.000",
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80",
+      image: "/images/hospitality.webp",
     },
     {
       key: "case3",
       icon: "🌾",
       investment: "€1.800",
-      image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&q=80",
+      image: "/images/agriculture.webp",
     },
   ];
 
