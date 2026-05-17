@@ -20,6 +20,7 @@ export default function Footer() {
                 src="https://www.ubuntuleadershipprogram.nl/wp-content/uploads/2025/04/ULPLOGO-2.png"
                 alt="ULP Logo"
                 className="h-12 w-auto"
+                style={{ filter: "brightness(0) invert(1)" }}
               />
               <span
                 className="text-xl font-bold"
