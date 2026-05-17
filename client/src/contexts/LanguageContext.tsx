@@ -31,7 +31,7 @@ const translations: Record<Language, Record<string, string>> = {
     // What we do
     "home.whatwedo.label": "Wat doen wij?",
     "home.whatwedo.title": "Meer dan een lening",
-    "home.whatwedo.body": "Wij geloven dat iedereen het recht heeft om te ondernemen. Niet iedereen krijgt een kans bij de bank — maar met een goed idee, motivatie en de juiste steun kun je wél starten en groeien.",
+    "home.whatwedo.body": "Wij geloven dat iedereen het recht heeft om te ondernemen. Niet iedereen krijgt een kans bij de bank - maar met een goed idee, motivatie en de juiste steun kun je wél starten en groeien.",
     "home.whatwedo.quote": "Kleine steun, groot verschil.",
 
     // Microfinance
@@ -107,7 +107,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Investors page
     "inv.hero.label": "Voor Investeerders",
     "inv.hero.title": "Investeer in mensen en potentieel",
-    "inv.hero.subtitle": "Draag bij aan economische ontwikkeling in Tanzania. Als lening, als gift, of als coach — elke bijdrage telt.",
+    "inv.hero.subtitle": "Draag bij aan economische ontwikkeling in Tanzania. Als lening, als gift, of als coach - elke bijdrage telt.",
     "inv.hero.cta": "Neem contact op",
 
     "inv.why.label": "Waarom investeren?",
@@ -147,7 +147,7 @@ const translations: Record<Language, Record<string, string>> = {
     // About page
     "about.hero.label": "Over Ons",
     "about.hero.title": "Onderdeel van het Ubuntu Leadership Programma",
-    "about.hero.subtitle": "ULP Invest is één van de drie pijlers van het Ubuntu Leadership Programma — een initiatief dat jongeren en ondernemers in de Usambara Mountains ondersteunt.",
+    "about.hero.subtitle": "ULP Invest is één van de drie pijlers van het Ubuntu Leadership Programma - een initiatief dat jongeren en ondernemers in de Usambara Mountains ondersteunt.",
 
     "about.ulp.label": "Ubuntu Leadership Programma",
     "about.ulp.title": "Drie pijlers, één missie",
@@ -189,6 +189,17 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.investors": "Voor Investeerders",
     "footer.about": "Over Ons",
     "footer.contact": "Contact",
+
+    "tag.businessplan": "Businessplan",
+    "tag.administration": "Administratie",
+    "tag.legal": "Juridisch",
+    "tag.marketing": "Marketing",
+    "tag.network": "Netwerk",
+    "tag.incubator": "Incubator",
+    "tag.incubator.desc": "Een incubator-omgeving voor groeiende ondernemers.",
+    "invest.how": "Hoe kunt u bijdragen?",
+    "invest.three_ways": "Drie manieren van investeren",
+    "invest.contact": "Neem contact op",
   },
 
   en: {
@@ -210,7 +221,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     "home.whatwedo.label": "What do we do?",
     "home.whatwedo.title": "More than a loan",
-    "home.whatwedo.body": "We believe everyone has the right to entrepreneurship. Not everyone gets a chance at the bank — but with a good idea, motivation and the right support, you can start and grow.",
+    "home.whatwedo.body": "We believe everyone has the right to entrepreneurship. Not everyone gets a chance at the bank - but with a good idea, motivation and the right support, you can start and grow.",
     "home.whatwedo.quote": "Small support, big difference.",
 
     "home.micro.label": "What is microfinance?",
@@ -281,7 +292,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     "inv.hero.label": "For Investors",
     "inv.hero.title": "Invest in people and potential",
-    "inv.hero.subtitle": "Contribute to economic development in Tanzania. As a loan, as a gift, or as a coach — every contribution counts.",
+    "inv.hero.subtitle": "Contribute to economic development in Tanzania. As a loan, as a gift, or as a coach - every contribution counts.",
     "inv.hero.cta": "Get in touch",
 
     "inv.why.label": "Why invest?",
@@ -320,7 +331,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     "about.hero.label": "About Us",
     "about.hero.title": "Part of the Ubuntu Leadership Program",
-    "about.hero.subtitle": "ULP Invest is one of the three pillars of the Ubuntu Leadership Program — an initiative that supports young people and entrepreneurs in the Usambara Mountains.",
+    "about.hero.subtitle": "ULP Invest is one of the three pillars of the Ubuntu Leadership Program - an initiative that supports young people and entrepreneurs in the Usambara Mountains.",
 
     "about.ulp.label": "Ubuntu Leadership Program",
     "about.ulp.title": "Three pillars, one mission",
@@ -360,6 +371,17 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.investors": "For Investors",
     "footer.about": "About Us",
     "footer.contact": "Contact",
+
+    "tag.businessplan": "Business Plan",
+    "tag.administration": "Administration",
+    "tag.legal": "Legal",
+    "tag.marketing": "Marketing",
+    "tag.network": "Network",
+    "tag.incubator": "Incubator",
+    "tag.incubator.desc": "An incubator environment for growing entrepreneurs.",
+    "invest.how": "How can you contribute?",
+    "invest.three_ways": "Three ways to invest",
+    "invest.contact": "Get in touch",
   },
 
   sw: {
@@ -381,7 +403,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     "home.whatwedo.label": "Tunafanya nini?",
     "home.whatwedo.title": "Zaidi ya mkopo",
-    "home.whatwedo.body": "Tunaamini kila mtu ana haki ya kufanya biashara. Si kila mtu anapata nafasi benki — lakini kwa wazo zuri, motisha na msaada sahihi, unaweza kuanza na kukua.",
+    "home.whatwedo.body": "Tunaamini kila mtu ana haki ya kufanya biashara. Si kila mtu anapata nafasi benki - lakini kwa wazo zuri, motisha na msaada sahihi, unaweza kuanza na kukua.",
     "home.whatwedo.quote": "Msaada mdogo, tofauti kubwa.",
 
     "home.micro.label": "Ufadhili mdogo ni nini?",
@@ -452,7 +474,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     "inv.hero.label": "Kwa Wawekezaji",
     "inv.hero.title": "Wekeza kwa watu na uwezo",
-    "inv.hero.subtitle": "Changia maendeleo ya kiuchumi Tanzania. Kama mkopo, kama zawadi, au kama kocha — kila mchango unahesabu.",
+    "inv.hero.subtitle": "Changia maendeleo ya kiuchumi Tanzania. Kama mkopo, kama zawadi, au kama kocha - kila mchango unahesabu.",
     "inv.hero.cta": "Wasiliana nasi",
 
     "inv.why.label": "Kwa nini kuwekeza?",
@@ -491,7 +513,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     "about.hero.label": "Kuhusu Sisi",
     "about.hero.title": "Sehemu ya Programu ya Uongozi ya Ubuntu",
-    "about.hero.subtitle": "ULP Invest ni moja ya nguzo tatu za Programu ya Uongozi ya Ubuntu — mpango unaosaidia vijana na wajasiriamali katika Milima ya Usambara.",
+    "about.hero.subtitle": "ULP Invest ni moja ya nguzo tatu za Programu ya Uongozi ya Ubuntu - mpango unaosaidia vijana na wajasiriamali katika Milima ya Usambara.",
 
     "about.ulp.label": "Programu ya Uongozi ya Ubuntu",
     "about.ulp.title": "Nguzo tatu, dhamira moja",
@@ -531,6 +553,17 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.investors": "Kwa Wawekezaji",
     "footer.about": "Kuhusu Sisi",
     "footer.contact": "Wasiliana",
+
+    "tag.businessplan": "Mpango wa Biashara",
+    "tag.administration": "Utawala",
+    "tag.legal": "Kisheria",
+    "tag.marketing": "Marketing",
+    "tag.network": "Mtandao",
+    "tag.incubator": "Inkubeta",
+    "tag.incubator.desc": "Mazingira ya inkubeta kwa wajasiriamali wanaoota.",
+    "invest.how": "Unaweza kuchangia vipi?",
+    "invest.three_ways": "Njia tatu za kuwekeza",
+    "invest.contact": "Wasiliana nasi",
   },
 };
 
