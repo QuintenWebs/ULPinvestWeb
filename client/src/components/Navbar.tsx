@@ -14,14 +14,15 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
-    { href: "/entrepreneurs", label: t("nav.entrepreneurs") },
+    { href: "/", label: "Home" },
     { href: "/investors", label: t("nav.investors") },
+    { href: "/entrepreneurs", label: t("nav.entrepreneurs") },
     { href: "/about", label: t("nav.about") },
   ];
 
   const languages: { code: Language; label: string }[] = [
-    { code: "nl", label: "NL" },
     { code: "en", label: "EN" },
+    { code: "nl", label: "NL" },
     { code: "sw", label: "SW" },
   ];
 

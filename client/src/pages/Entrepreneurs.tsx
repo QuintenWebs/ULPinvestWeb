@@ -7,7 +7,8 @@ import { CheckCircle2, ArrowRight, Euro, Clock, TrendingUp, Users } from "lucide
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const ENTREPRENEUR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/entrepreneur-market-WWWVVn4Xj4EZgWtJt8oeTT.webp";
+const ENTREPRENEUR_IMG = "/manus-storage/PHOTO-2025-09-10-11-45-18_cfea5f5e.jpg";
+const WOODWORKING_IMG = "/manus-storage/PHOTO-2025-02-19-08-50-49_e73995aa.jpg";
 
 export default function Entrepreneurs() {
   const { t } = useLanguage();
