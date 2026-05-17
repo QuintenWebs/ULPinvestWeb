@@ -535,13 +535,13 @@ const translations: Record<Language, Record<string, string>> = {
 };
 
 const LanguageContext = createContext<LanguageContextType>({
-  lang: "nl",
+  lang: "en",
   setLang: () => {},
   t: (key) => key,
 });
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLang] = useState<Language>("nl");
+  const [lang, setLang] = useState<Language>("en");
 
   const t = (key: string): string => {
     return translations[lang][key] ?? translations["nl"][key] ?? key;
