@@ -165,13 +165,13 @@ export default function Investors() {
               className="fade-up text-xs font-bold uppercase tracking-widest"
               style={{ color: "oklch(0.72 0.16 75)" }}
             >
-              Hoe kunt u bijdragen?
+              {t("invest.how")}
             </span>
             <h2
               className="fade-up text-4xl md:text-5xl font-bold mt-3"
               style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)", transitionDelay: "60ms" }}
             >
-              Drie manieren van investeren
+              {t("invest.three_ways")}
             </h2>
           </div>
 
@@ -269,7 +269,7 @@ export default function Investors() {
                 href="mailto:info@ulpinvest.nl?subject=Gift%20ULP%20Invest"
                 className="btn-outline-gold text-center text-sm"
               >
-                Neem contact op
+                {t("invest.contact")}
               </a>
             </div>
 
@@ -300,7 +300,7 @@ export default function Investors() {
                 {t("inv.coach.body")}
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {["Hospitality", "Houtbewerking", "MKB", "Marketing", "Administratie"].map((tag) => (
+                {["Hospitality", "Woodworking", "SME", t("tag.marketing"), t("tag.administration")].map((tag) => (
                   <span
                     key={tag}
                     className="px-3 py-1 rounded-full text-xs font-semibold"

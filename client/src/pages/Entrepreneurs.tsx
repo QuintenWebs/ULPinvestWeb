@@ -237,19 +237,19 @@ export default function Entrepreneurs() {
                 style={{ background: "oklch(0.22 0.06 250)" }}
               >
                 <div
-                  className="text-6xl font-bold mb-4"
-                  style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.72 0.16 75 / 0.25)" }}
+                  className="text-3xl mb-4"
+                  style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.72 0.16 75 / 0.4)" }}
                 >
-                  Incubator
+                  {t("tag.incubator")}
                 </div>
                 <p
                   className="text-2xl font-semibold leading-snug mb-6"
                   style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.85 0.02 250)" }}
                 >
-                  Een incubator-omgeving voor groeiende ondernemers.
+                  {t("tag.incubator.desc")}
                 </p>
                 <div className="space-y-3">
-                  {["Businessplan", "Administratie", "Juridisch", "Marketing", "Netwerk"].map((tag) => (
+                  {[t("tag.businessplan"), t("tag.administration"), t("tag.legal"), t("tag.marketing"), t("tag.network")].map((tag) => (
                     <span
                       key={tag}
                       className="inline-block mr-2 mb-2 px-3 py-1 rounded-full text-xs font-semibold"

@@ -269,7 +269,7 @@ export default function About() {
             style={{ background: "oklch(0.26 0.055 250 / 0.5)", border: "1px dashed oklch(1 0 0 / 15%)" }}
           >
             <p className="text-sm" style={{ color: "oklch(0.55 0.03 250)" }}>
-              + 3 teamleden — profielen worden binnenkort toegevoegd.
+              + 3 {t("about.team.label").toLowerCase()} - {t("footer.contact").toLowerCase()} {t("footer.about").toLowerCase()}.
             </p>
           </div>
         </div>
