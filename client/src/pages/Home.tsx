@@ -8,7 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/hero-usambara-SLyqoHMyyESP8GyuTWMNBM.webp";
-const ENTREPRENEUR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/entrepreneur-market-WWWVVn4Xj4EZgWtJt8oeTT.webp";
+const ENTREPRENEUR_IMG = "/manus-storage/PHOTO-2025-09-10-11-45-18_cfea5f5e.jpg";
 const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/usambara-landscape-TxKRukdrenTyPFKVocwUJb.webp";
 
 export default function Home() {
