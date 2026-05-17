@@ -26,7 +26,7 @@ export default function Home() {
       key: "case2",
       icon: "🏡",
       investment: "€3.000",
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80",
+      image: "/manus-storage/IMG_2611_c864a7fa.webp",
     },
     {
       key: "case3",
