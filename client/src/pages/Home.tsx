@@ -20,7 +20,7 @@ export default function Home() {
       key: "case1",
       icon: "🪵",
       investment: "€2.500",
-      image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80",
+      image: "/manus-storage/PHOTO-2025-02-19-08-50-49_e73995aa.jpg",
     },
     {
       key: "case2",
@@ -32,7 +32,7 @@ export default function Home() {
       key: "case3",
       icon: "🌾",
       investment: "€1.800",
-      image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80",
+      image: "/manus-storage/IMG_0134_90369ea0.webp",
     },
   ];
 
