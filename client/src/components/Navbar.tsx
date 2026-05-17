@@ -35,17 +35,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div
-              className="w-9 h-9 rounded-sm flex items-center justify-center font-bold text-sm"
-              style={{ background: "oklch(0.72 0.16 75)", color: "oklch(0.14 0.06 250)" }}
-            >
-              ULP
-            </div>
-            <div className="flex flex-col leading-tight">
+            <img
+              src="https://www.ubuntuleadershipprogram.nl/wp-content/uploads/2025/04/ULPLOGO-2.png"
+              alt="ULP Logo"
+              className="h-10 w-auto"
+            />
+            <div className="flex flex-col leading-tight hidden sm:block">
               <span className="font-bold text-base tracking-wide" style={{ color: "oklch(0.95 0.01 250)", fontFamily: "'Fraunces', serif" }}>
                 ULP Invest
               </span>
-              <span className="text-xs hidden sm:block" style={{ color: "oklch(0.65 0.04 250)" }}>
+              <span className="text-xs" style={{ color: "oklch(0.65 0.04 250)" }}>
                 {t("nav.tagline")}
               </span>
             </div>
