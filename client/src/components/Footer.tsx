@@ -85,7 +85,7 @@ export default function Footer() {
               className="text-xs font-bold uppercase tracking-widest mb-4"
               style={{ color: "oklch(0.72 0.16 75)" }}
             >
-              Navigatie
+              {t("footer.nav.heading")}
             </h4>
             <ul className="flex flex-col gap-2">
               {[
@@ -116,9 +116,9 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-2">
               {[
-                { href: "https://www.ubuntuleadershipprogram.nl/the-program/", label: "Het Programma" },
+                { href: "https://www.ubuntuleadershipprogram.nl/the-program/", label: t("footer.ulp.program") },
                 { href: "https://www.ubuntuleadershipprogram.nl/", label: "Business School" },
-                { href: "https://www.ubuntuleadershipprogram.nl/contact-us/", label: "Contact ULP" },
+                { href: "https://www.ubuntuleadershipprogram.nl/contact-us/", label: t("footer.ulp.contact") },
               ].map((link) => (
                 <li key={link.href}>
                   <a
