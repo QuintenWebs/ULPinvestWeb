@@ -125,7 +125,7 @@ export default function Home() {
             {[
               { value: "€7.300+", label: t("home.stats.invested") },
               { value: "3", label: t("home.stats.businesses") },
-              { value: "2021", label: "Opgericht" },
+              { value: "2021", label: t("home.stats.founded") },
               { value: t("home.stats.region.value"), label: t("home.stats.region") },
             ].map((stat, i) => (
               <div key={i}>
@@ -359,7 +359,7 @@ export default function Home() {
             className="fade-up text-3xl md:text-5xl font-bold mb-8 max-w-3xl mx-auto leading-tight"
             style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.97 0.01 250)" }}
           >
-            "Samen bouwen we aan kansen in de Usambara Mountains."
+            {t("home.mission.quote")}
           </p>
           <div className="fade-up flex flex-wrap justify-center gap-4" style={{ transitionDelay: "120ms" }}>
             <Link href="/entrepreneurs" className="btn-gold flex items-center gap-2">

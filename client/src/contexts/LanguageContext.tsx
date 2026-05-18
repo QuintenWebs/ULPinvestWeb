@@ -204,6 +204,17 @@ const translations: Record<Language, Record<string, string>> = {
     "invest.three_ways": "Drie manieren van investeren",
     "invest.contact": "Neem contact op",
     "home": "Home",
+
+    // Stats
+    "home.stats.founded": "Opgericht",
+
+    // Mission quote on Home page
+    "home.mission.quote": "Samen bouwen we aan kansen in de Usambara Mountains.",
+
+    // Footer
+    "footer.nav.heading": "Navigatie",
+    "footer.ulp.program": "Het Programma",
+    "footer.ulp.contact": "Contact ULP",
   },
 
   en: {
@@ -390,6 +401,17 @@ const translations: Record<Language, Record<string, string>> = {
     "invest.three_ways": "Three ways to invest",
     "invest.contact": "Get in touch",
     "home": "Home",
+
+    // Stats
+    "home.stats.founded": "Founded",
+
+    // Mission quote on Home page
+    "home.mission.quote": "Together we build opportunities in the Usambara Mountains.",
+
+    // Footer
+    "footer.nav.heading": "Navigation",
+    "footer.ulp.program": "The Program",
+    "footer.ulp.contact": "Contact ULP",
   },
 
   sw: {
@@ -576,6 +598,17 @@ const translations: Record<Language, Record<string, string>> = {
     "invest.three_ways": "Njia tatu za kuwekeza",
     "invest.contact": "Wasiliana nasi",
     "home": "Nyumbani",
+
+    // Stats
+    "home.stats.founded": "Ilianzishwa",
+
+    // Mission quote on Home page
+    "home.mission.quote": "Pamoja tunajenga fursa katika Milima ya Usambara.",
+
+    // Footer
+    "footer.nav.heading": "Urambazaji",
+    "footer.ulp.program": "Programu",
+    "footer.ulp.contact": "Wasiliana ULP",
   },
 };
 
