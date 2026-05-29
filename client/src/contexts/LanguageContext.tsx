@@ -15,7 +15,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.investors": "Voor Investeerders",
     "nav.about": "Over Ons",
     "nav.contact": "Contact",
-    "nav.tagline": "Kleine lening. Grote impact.",
+    "nav.tagline": "Microlening, macro impact.",
     "nav.home": "Home",
 
     // Home / Hero
@@ -170,11 +170,11 @@ const translations: Record<Language, Record<string, string>> = {
     "about.team.theo.bio": "Theo is fondsbeheerder van ULP Invest en aanspreekpunt voor investeerders. Hij is verantwoordelijk voor het beheer van het investeringsfonds, communicatie met investeerders en de financiële monitoring van investeringen.",
     "about.team.theo.phone": "06 29550134",
     "about.team.hans.name": "Hans Valkenburg",
-    "about.team.hans.role": "Oprichter & Voorzitter Ubuntu Leadership Program",
-    "about.team.hans.bio": "Hans is oprichter van het Ubuntu Leadership Program, de moederorganisatie van ULP Invest. Vanuit deze rol is hij betrokken bij de visie en strategie van ULP Invest, de ontwikkeling van ondernemerschap in Tanzania en internationale samenwerking.",
+    "about.team.hans.role": "Oprichter Ubuntu Leadership Program",
+    "about.team.hans.bio": "Hans is oprichter van het Ubuntu Leadership Program, de moederorganisatie van ULP Invest. Vanuit deze rol is hij betrokken bij de visie en strategie van ULP Invest en de ontwikkeling van ondernemerschap in Tanzania.",
 
     "about.mission.label": "Onze Missie",
-    "about.mission.title": "Kleine lening. Grote impact.",
+    "about.mission.title": "Microlening, macro impact.",
     "about.mission.body": "We geven mensen niet alleen financiële steun, maar ook het vertrouwen en de kennis om hun toekomst zelf in handen te nemen. Samen bouwen we aan kansen in de Usambara Mountains.",
 
     // Contact
@@ -185,7 +185,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.follow": "Volg ons",
 
     // Footer
-    "footer.tagline": "Kleine lening. Grote impact.",
+    "footer.tagline": "Microlening, macro impact.",
     "footer.part_of": "Onderdeel van het",
     "footer.rights": "Alle rechten voorbehouden.",
     "footer.entrepreneurs": "Voor Ondernemers",
@@ -222,7 +222,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.investors": "For Investors",
     "nav.about": "About Us",
     "nav.contact": "Contact",
-    "nav.tagline": "Small loan. Big impact.",
+    "nav.tagline": "Microloan, macro impact.",
     "nav.home": "Home",
 
     "home.hero.label": "Usambara Mountains, Tanzania",
@@ -366,14 +366,14 @@ const translations: Record<Language, Record<string, string>> = {
     "about.pillar.active": "This is us",
     "about.team.theo.name": "Theo van Stuijvenberg",
     "about.team.theo.role": "Fund Manager ULP Invest",
-    "about.team.theo.bio": "Theo is fund manager of ULP Invest and the point of contact for investors. He is responsible for managing the investment fund, communicating with investors and financial monitoring of investments.",
+    "about.team.theo.bio": "Theo is fund manager of ULP Invest and the point of contact for investors. Together with the team he is responsible for managing the investment fund, communicating with investors and financial monitoring of investments.",
     "about.team.theo.phone": "06 29550134",
     "about.team.hans.name": "Hans Valkenburg",
-    "about.team.hans.role": "Founder & Chairman Ubuntu Leadership Program",
-    "about.team.hans.bio": "Hans is the founder of the Ubuntu Leadership Program, the parent organization of ULP Invest. In this role, he is involved in the vision and strategy of ULP Invest, the development of entrepreneurship in Tanzania and international cooperation.",
+    "about.team.hans.role": "Founder Ubuntu Leadership Program",
+    "about.team.hans.bio": "Hans is the founder of the Ubuntu Leadership Program, the parent organization of ULP Invest. In this role, he is involved in the vision and strategy of ULP Invest and the development of entrepreneurship in Tanzania.",
 
     "about.mission.label": "Our Mission",
-    "about.mission.title": "Small loan. Big impact.",
+    "about.mission.title": "Microloan, macro impact.",
     "about.mission.body": "We give people not only financial support, but also the confidence and knowledge to take their future into their own hands. Together we build opportunities in the Usambara Mountains.",
 
     "contact.title": "Contact",
@@ -382,7 +382,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.website": "ULP Main Website",
     "contact.follow": "Follow us",
 
-    "footer.tagline": "Small loan. Big impact.",
+    "footer.tagline": "Microloan, macro impact.",
     "footer.part_of": "Part of the",
     "footer.rights": "All rights reserved.",
     "footer.entrepreneurs": "For Entrepreneurs",
@@ -420,7 +420,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.about": "Kuhusu Sisi",
     "nav.contact": "Wasiliana",
     "nav.home": "Nyumbani",
-    "nav.tagline": "Mkopo mdogo. Athari kubwa.",
+    "nav.tagline": "Mkopo mdogo, athari kubwa.",
 
     "home.hero.label": "Milima ya Usambara, Tanzania",
     "home.hero.title": "Mikopo midogo,\nfursa kubwa.",
@@ -566,11 +566,11 @@ const translations: Record<Language, Record<string, string>> = {
     "about.team.theo.bio": "Theo ni msimamizi wa mfuko wa ULP Invest na mtu wa kuwasiliana naye kwa wawekezaji. Anawajibika kwa usimamizi wa mfuko wa uwekezaji, mawasiliano na wawekezaji na ufuatiliaji wa fedha.",
     "about.team.theo.phone": "06 29550134",
     "about.team.hans.name": "Hans Valkenburg",
-    "about.team.hans.role": "Mwanzilishi & Mwenyekiti wa Programu ya Uongozi ya Ubuntu",
-    "about.team.hans.bio": "Hans ni mwanzilishi wa Programu ya Uongozi ya Ubuntu, shirika mama la ULP Invest. Katika jukumu hili, anahusika na maono na mkakati wa ULP Invest, maendeleo ya ujasiriamali Tanzania na ushirikiano wa kimataifa.",
+    "about.team.hans.role": "Mwanzilishi wa Programu ya Uongozi ya Ubuntu",
+    "about.team.hans.bio": "Hans ni mwanzilishi wa Programu ya Uongozi ya Ubuntu, shirika mama la ULP Invest. Katika jukumu hili, anahusika na maono na mkakati wa ULP Invest na maendeleo ya ujasiriamali Tanzania.",
 
     "about.mission.label": "Dhamira Yetu",
-    "about.mission.title": "Mkopo mdogo. Athari kubwa.",
+    "about.mission.title": "Mkopo mdogo, athari kubwa.",
     "about.mission.body": "Tunatoa watu si tu msaada wa kifedha, bali pia imani na maarifa ya kuchukua mustakabali wao mikononi mwao. Pamoja tunajenga fursa katika Milima ya Usambara.",
 
     "contact.title": "Wasiliana",
@@ -579,7 +579,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.website": "Tovuti Kuu ya ULP",
     "contact.follow": "Tufuate",
 
-    "footer.tagline": "Mkopo mdogo. Athari kubwa.",
+    "footer.tagline": "Mkopo mdogo, athari kubwa.",
     "footer.part_of": "Sehemu ya",
     "footer.rights": "Haki zote zimehifadhiwa.",
     "footer.entrepreneurs": "Kwa Wajasiriamali",
