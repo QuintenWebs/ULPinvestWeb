@@ -136,8 +136,8 @@ const translations: Record<Language, Record<string, string>> = {
     "inv.gift.title": "Gift overmaken",
     "inv.gift.body": "Een gift is ook zeer welkom. Maak over naar:",
     "inv.gift.instruction": "Vermeld bij overboeking: ULP Invest – Gift",
-    "inv.gift.iban": "IBAN: NL00 XXXX 0000 0000 00",
-    "inv.gift.name": "T.n.v.: Stichting Ubuntu Leadership Program",
+    "inv.gift.iban": "IBAN: NL56 RABO 0323 7422 70",
+    "inv.gift.name": "T.n.v.: Stichting Ubuntu Leadership Programma",
 
     "inv.coach.label": "Coaching",
     "inv.coach.title": "Deel uw expertise",
@@ -336,8 +336,8 @@ const translations: Record<Language, Record<string, string>> = {
     "inv.gift.title": "Make a donation",
     "inv.gift.body": "A donation is also very welcome. Transfer to:",
     "inv.gift.instruction": "Please state: ULP Invest – Gift",
-    "inv.gift.iban": "IBAN: NL00 XXXX 0000 0000 00",
-    "inv.gift.name": "Payable to: Stichting Ubuntu Leadership Program",
+    "inv.gift.iban": "IBAN: NL56 RABO 0323 7422 70",
+    "inv.gift.name": "Payable to: Stichting Ubuntu Leadership Programma",
 
     "inv.coach.label": "Coaching",
     "inv.coach.title": "Share your expertise",
@@ -533,8 +533,8 @@ const translations: Record<Language, Record<string, string>> = {
     "inv.gift.title": "Toa mchango",
     "inv.gift.body": "Mchango pia unakaribishwa sana. Hamisha kwa:",
     "inv.gift.instruction": "Taja: ULP Invest – Zawadi",
-    "inv.gift.iban": "IBAN: NL00 XXXX 0000 0000 00",
-    "inv.gift.name": "Kwa: Stichting Ubuntu Leadership Program",
+    "inv.gift.iban": "IBAN: NL56 RABO 0323 7422 70",
+    "inv.gift.name": "Kwa: Stichting Ubuntu Leadership Programma",
 
     "inv.coach.label": "Mafunzo",
     "inv.coach.title": "Shiriki utaalamu wako",
