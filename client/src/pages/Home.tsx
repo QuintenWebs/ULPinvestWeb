@@ -123,7 +123,7 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: "TZS 11,800", label: t("home.stats.invested") },
+              { value: "TZS 320,000", label: t("home.stats.invested") },
               { value: "3", label: t("home.stats.businesses") },
               { value: "2021", label: t("home.stats.founded") },
               { value: t("home.stats.region.value"), label: t("home.stats.region") },
