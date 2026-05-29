@@ -43,7 +43,7 @@ const translations: Record<Language, Record<string, string>> = {
     "home.micro.item2": "Inrichting van je werkplek",
     "home.micro.item3": "Marketing of vervoer",
     "home.micro.item4": "Eerste voorraad voor je nieuwe zaak",
-    "home.micro.range": "Leningen van €500 tot €5.000, met flexibele voorwaarden.",
+    "home.micro.range": "Leningen van €500 tot €50.000, met flexibele voorwaarden.",
 
     // Why it works
     "home.why.label": "Waarom het werkt",
@@ -72,7 +72,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Entrepreneurs page
     "ent.hero.label": "Voor Ondernemers",
     "ent.hero.title": "Heeft uw bedrijf groeipotentieel?",
-    "ent.hero.subtitle": "ULP Invest biedt microkredieten van €500 tot €5.000 én persoonlijke begeleiding voor kleine ondernemers in de Usambara Mountains.",
+    "ent.hero.subtitle": "ULP Invest biedt microkredieten van €500 tot €50.000 én persoonlijke begeleiding voor kleine ondernemers in de Usambara Mountains.",
     "ent.hero.cta": "Stuur ons uw plan",
 
     "ent.who.label": "Voor wie?",
@@ -85,8 +85,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     "ent.loan.label": "Financiering",
     "ent.loan.title": "Eerlijke leningen, flexibele voorwaarden",
-    "ent.loan.body": "We verstrekken investeringen tussen €500 en €5.000 met een terugbetalingstermijn van 3 tot 5 jaar. Versneld aflossen is altijd mogelijk.",
-    "ent.loan.amount": "€500 – €5.000",
+    "ent.loan.body": "We verstrekken investeringen tussen €500 en €50.000 met een terugbetalingstermijn van 3 tot 5 jaar. Versneld aflossen is altijd mogelijk.",
+    "ent.loan.amount": "€500 – €50.000",
     "ent.loan.term": "3 tot 5 jaar",
     "ent.loan.early": "Versneld aflossen mogelijk",
     "ent.loan.rate": "Eerlijke rente",
@@ -167,7 +167,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.pillar.active": "Dit zijn wij",
     "about.team.theo.name": "Theo van Stuijvenberg",
     "about.team.theo.role": "Fondsbeheerder ULP Invest",
-    "about.team.theo.bio": "Theo is fondsbeheerder van ULP Invest en aanspreekpunt voor investeerders. Hij is verantwoordelijk voor het beheer van het investeringsfonds, communicatie met investeerders en de financiële monitoring van investeringen.",
+    "about.team.theo.bio": "Theo is fondsbeheerder van ULP Invest en aanspreekpunt voor investeerders. Samen met het team is hij verantwoordelijk voor het beheer van het investeringsfonds, communicatie met investeerders en de financiële monitoring van investeringen.",
     "about.team.theo.phone": "06 29550134",
     "about.team.hans.name": "Hans Valkenburg",
     "about.team.hans.role": "Oprichter Ubuntu Leadership Program",
@@ -226,7 +226,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.home": "Home",
 
     "home.hero.label": "Usambara Mountains, Tanzania",
-    "home.hero.title": "Small loans,\nbig opportunities.",
+    "home.hero.title": "Microloans,\nbig opportunities.",
     "home.hero.subtitle": "ULP Invest supports small entrepreneurs with microloans and personal coaching. Part of the Ubuntu Leadership Program.",
     "home.hero.cta.entrepreneurs": "For entrepreneurs",
     "home.hero.cta.investors": "For investors",
@@ -237,17 +237,17 @@ const translations: Record<Language, Record<string, string>> = {
 
     "home.whatwedo.label": "What do we do?",
     "home.whatwedo.title": "More than a loan",
-    "home.whatwedo.body": "We believe everyone has the right to entrepreneurship. Not everyone gets a chance at the bank - but with a good idea, motivation and the right support, you can start and grow.",
+    "home.whatwedo.body": "We think everyone has the right to entrepreneurship. Not everyone gets a chance at the bank - but with a good idea, motivation and the right support, you can start and grow.",
     "home.whatwedo.quote": "Small support, big difference.",
 
     "home.micro.label": "What is microfinance?",
     "home.micro.title": "Investing in growth",
-    "home.micro.body": "Microfinance means small loans with a big effect. Our microloans give you the opportunity to invest in your business.",
+    "home.micro.body": "Microfinance means microloans with a big effect. Our microloans give you the opportunity to invest in your business.",
     "home.micro.item1": "Materials or tools",
     "home.micro.item2": "Setting up your workspace",
     "home.micro.item3": "Marketing or transport",
     "home.micro.item4": "First stock for your new business",
-    "home.micro.range": "Loans from €500 to €5,000, with flexible terms.",
+    "home.micro.range": "Loans from €500 to €50,000, with flexible terms.",
 
     "home.why.label": "Why it works",
     "home.why.title": "Our approach",
@@ -273,7 +273,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     "ent.hero.label": "For Entrepreneurs",
     "ent.hero.title": "Does your business have growth potential?",
-    "ent.hero.subtitle": "ULP Invest offers microloans from €500 to €5,000 and personal coaching for small entrepreneurs in the Usambara Mountains.",
+    "ent.hero.subtitle": "ULP Invest offers microloans from €500 to €50,000 and personal coaching for small entrepreneurs in the Usambara Mountains.",
     "ent.hero.cta": "Send us your plan",
 
     "ent.who.label": "Who is it for?",
@@ -286,8 +286,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     "ent.loan.label": "Financing",
     "ent.loan.title": "Fair loans, flexible terms",
-    "ent.loan.body": "We provide investments between €500 and €5,000 with a repayment period of 3 to 5 years. Early repayment is always possible.",
-    "ent.loan.amount": "€500 – €5,000",
+    "ent.loan.body": "We provide investments between €500 and €50,000 with a repayment period of 3 to 5 years. Early repayment is always possible.",
+    "ent.loan.amount": "€500 – €50,000",
     "ent.loan.term": "3 to 5 years",
     "ent.loan.early": "Early repayment possible",
     "ent.loan.rate": "Fair interest rate",
@@ -319,9 +319,9 @@ const translations: Record<Language, Record<string, string>> = {
     "inv.why.item3": "Economic development Tanzania",
     "inv.why.item4": "Annual visit to the projects possible",
 
-    "inv.risk.label": "Honest about risk",
+    "inv.risk.label": "Clear about risk",
     "inv.risk.title": "High risk, high impact",
-    "inv.risk.body": "We are honest: this is a complex developing region. Not all loans will be fully repaid. That is why we work with a mix of commercial loans and gifts.",
+    "inv.risk.body": "We are clear: this is a complex developing region. Not all loans will be fully repaid. That is why we work with a mix of commercial loans and gifts.",
     "inv.risk.quote": "Your investment is an act of trust in people with a dream.",
 
     "inv.loan.label": "Provide a loan",
@@ -341,7 +341,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     "inv.coach.label": "Coaching",
     "inv.coach.title": "Share your expertise",
-    "inv.coach.body": "Do you have experience in hospitality, woodworking, SME management, marketing or administration? You can also directly coach entrepreneurs during an annual visit to Tanzania.",
+    "inv.coach.body": "Do you have experience in hospitality, woodworking, SME management, marketing or administration? You get support from ULP Invest because cross-cultural coaching is a challenge; a hit-and-run approach is highly unproductive.",
     "inv.coach.visit": "Annual visit to Tanzania possible",
     "inv.coach.cta": "Register as a coach",
 
@@ -444,7 +444,7 @@ const translations: Record<Language, Record<string, string>> = {
     "home.micro.item2": "Kuandaa mahali pa kazi",
     "home.micro.item3": "Masoko au usafiri",
     "home.micro.item4": "Hifadhi ya kwanza kwa biashara yako mpya",
-    "home.micro.range": "Mikopo kuanzia €500 hadi €5,000, kwa masharti ya kubadilika.",
+    "home.micro.range": "Mikopo kuanzia €500 hadi €50,000, kwa masharti ya kubadilika.",
 
     "home.why.label": "Kwa nini inafanya kazi",
     "home.why.title": "Mbinu yetu",
@@ -470,7 +470,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     "ent.hero.label": "Kwa Wajasiriamali",
     "ent.hero.title": "Je, biashara yako ina uwezo wa kukua?",
-    "ent.hero.subtitle": "ULP Invest inatoa mikopo kuanzia €500 hadi €5,000 na mwongozo wa kibinafsi kwa wajasiriamali wadogo katika Milima ya Usambara.",
+    "ent.hero.subtitle": "ULP Invest inatoa mikopo kuanzia €500 hadi €50,000 na mwongozo wa kibinafsi kwa wajasiriamali wadogo katika Milima ya Usambara.",
     "ent.hero.cta": "Tutumie mpango wako",
 
     "ent.who.label": "Kwa nani?",
@@ -483,8 +483,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     "ent.loan.label": "Ufadhili",
     "ent.loan.title": "Mikopo ya haki, masharti ya kubadilika",
-    "ent.loan.body": "Tunatoa uwekezaji kati ya €500 na €5,000 na muda wa kulipa wa miaka 3 hadi 5. Kulipa mapema daima kunawezekana.",
-    "ent.loan.amount": "€500 – €5,000",
+    "ent.loan.body": "Tunatoa uwekezaji kati ya €500 na €50,000 na muda wa kulipa wa miaka 3 hadi 5. Kulipa mapema daima kunawezekana.",
+    "ent.loan.amount": "€500 – €50,000",
     "ent.loan.term": "Miaka 3 hadi 5",
     "ent.loan.early": "Kulipa mapema kunawezekana",
     "ent.loan.rate": "Riba ya haki",
@@ -563,7 +563,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.pillar.active": "Hii ni sisi",
     "about.team.theo.name": "Theo van Stuijvenberg",
     "about.team.theo.role": "Msimamizi wa Mfuko wa ULP Invest",
-    "about.team.theo.bio": "Theo ni msimamizi wa mfuko wa ULP Invest na mtu wa kuwasiliana naye kwa wawekezaji. Anawajibika kwa usimamizi wa mfuko wa uwekezaji, mawasiliano na wawekezaji na ufuatiliaji wa fedha.",
+    "about.team.theo.bio": "Theo ni msimamizi wa mfuko wa ULP Invest na mtu wa kuwasiliana naye kwa wawekezaji. Pamoja na timu, anawajibika kwa usimamizi wa mfuko wa uwekezaji, mawasiliano na wawekezaji na ufuatiliaji wa fedha.",
     "about.team.theo.phone": "06 29550134",
     "about.team.hans.name": "Hans Valkenburg",
     "about.team.hans.role": "Mwanzilishi wa Programu ya Uongozi ya Ubuntu",
