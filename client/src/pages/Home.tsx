@@ -123,19 +123,24 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: "TZS 969,504,000", label: t("home.stats.invested"), year: "2026" },
+              { value: "969,504,000", prefix: "TZS", label: t("home.stats.invested"), year: "2026" },
               { value: "3", label: t("home.stats.businesses") },
               { value: "2021", label: t("home.stats.founded") },
               { value: t("home.stats.region.value"), label: t("home.stats.region") },
             ].map((stat, i) => (
               <div key={i}>
+                {'prefix' in stat && stat.prefix && (
+                  <div className="text-sm font-bold uppercase tracking-widest mb-0.5" style={{ color: "oklch(0.20 0.06 250)" }}>
+                    {stat.prefix}
+                  </div>
+                )}
                 <div
-                  className="text-3xl md:text-4xl font-bold mb-1"
+                  className="text-3xl md:text-4xl font-bold mb-1 flex items-start justify-center gap-1"
                   style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.14 0.06 250)" }}
                 >
-                  {stat.value}
+                  <span>{stat.value}</span>
                   {'year' in stat && stat.year && (
-                    <sup className="text-base font-semibold ml-1" style={{ color: "oklch(0.20 0.06 250)" }}>{stat.year}</sup>
+                    <sup className="text-xs font-semibold mt-1" style={{ color: "oklch(0.25 0.06 250)" }}>{stat.year}</sup>
                   )}
                 </div>
                 <div className="text-sm font-semibold uppercase tracking-wide" style={{ color: "oklch(0.25 0.06 250)" }}>
