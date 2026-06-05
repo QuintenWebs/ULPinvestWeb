@@ -8,6 +8,12 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/usambara-landscape-TxKRukdrenTyPFKVocwUJb.webp";
 
+// Team member photos
+const ROSE_IMG = "/manus-storage/9d3b89fe-825c-4d7b-bca7-a8c6b300e05f_a487b121.jpg";
+const NASRA_IMG = "/manus-storage/IMG_8870_5fc36b73.jpg";
+const HANS_IMG = "/manus-storage/pasted_file_YMsxUk_image_a25110e0.png";
+const THEO_IMG = "/manus-storage/pasted_file_ExXU15_image_fce01ff2.png";
+
 export default function About() {
   const { t } = useLanguage();
   const revealRef = useScrollReveal();
@@ -169,18 +175,126 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 
-            {/* Theo */}
+            {/* Rose Henry Cole */}
             <div
               className="fade-up card-lift p-8 rounded-xl"
               style={{ background: "oklch(0.26 0.055 250)" }}
             >
               <div className="flex items-start gap-4 mb-6">
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0"
-                  style={{ background: "oklch(0.72 0.16 75 / 0.2)", color: "oklch(0.72 0.16 75)" }}
-                >
-                  TV
+                <img
+                  src={ROSE_IMG}
+                  alt="Rose Henry Cole"
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  style={{ objectPosition: "center top" }}
+                />
+                <div>
+                  <h3
+                    className="text-xl font-bold"
+                    style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
+                  >
+                    Rose Henry Cole
+                  </h3>
                 </div>
+              </div>
+              <div className="space-y-2">
+                <a
+                  href="tel:+255622007120"
+                  className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
+                  style={{ color: "oklch(0.65 0.04 250)" }}
+                >
+                  <Phone size={14} />
+                  +255 622 007 120
+                </a>
+              </div>
+            </div>
+
+            {/* Nasra Kigombola */}
+            <div
+              className="fade-up card-lift p-8 rounded-xl"
+              style={{ background: "oklch(0.26 0.055 250)", transitionDelay: "100ms" }}
+            >
+              <div className="flex items-start gap-4 mb-6">
+                <img
+                  src={NASRA_IMG}
+                  alt="Nasra Kigombola"
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  style={{ objectPosition: "center top" }}
+                />
+                <div>
+                  <h3
+                    className="text-xl font-bold"
+                    style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
+                  >
+                    Nasra Kigombola
+                  </h3>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <a
+                  href="tel:+255655106424"
+                  className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
+                  style={{ color: "oklch(0.65 0.04 250)" }}
+                >
+                  <Phone size={14} />
+                  +255 65 510 6424
+                </a>
+              </div>
+            </div>
+
+            {/* Hans */}
+            <div
+              className="fade-up card-lift p-8 rounded-xl"
+              style={{ background: "oklch(0.26 0.055 250)", transitionDelay: "200ms" }}
+            >
+              <div className="flex items-start gap-4 mb-6">
+                <img
+                  src={HANS_IMG}
+                  alt="Hans Valkenburg"
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  style={{ objectPosition: "center top" }}
+                />
+                <div>
+                  <h3
+                    className="text-xl font-bold"
+                    style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
+                  >
+                    {t("about.team.hans.name")}
+                  </h3>
+                  <p
+                    className="text-sm font-semibold mt-1"
+                    style={{ color: "oklch(0.72 0.16 75)" }}
+                  >
+                    {t("about.team.hans.role")}
+                  </p>
+                </div>
+              </div>
+              <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.70 0.03 250)" }}>
+                {t("about.team.hans.bio")}
+              </p>
+              <a
+                href="https://www.ubuntuleadershipprogram.nl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
+                style={{ color: "oklch(0.65 0.04 250)" }}
+              >
+                <ExternalLink size={14} />
+                ubuntuleadershipprogram.nl
+              </a>
+            </div>
+
+            {/* Theo */}
+            <div
+              className="fade-up card-lift p-8 rounded-xl"
+              style={{ background: "oklch(0.26 0.055 250)", transitionDelay: "300ms" }}
+            >
+              <div className="flex items-start gap-4 mb-6">
+                <img
+                  src={THEO_IMG}
+                  alt="Theo van Stuijvenberg"
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  style={{ objectPosition: "center top" }}
+                />
                 <div>
                   <h3
                     className="text-xl font-bold"
@@ -219,58 +333,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Hans */}
-            <div
-              className="fade-up card-lift p-8 rounded-xl"
-              style={{ background: "oklch(0.26 0.055 250)", transitionDelay: "100ms" }}
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0"
-                  style={{ background: "oklch(0.72 0.16 75 / 0.2)", color: "oklch(0.72 0.16 75)" }}
-                >
-                  HV
-                </div>
-                <div>
-                  <h3
-                    className="text-xl font-bold"
-                    style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
-                  >
-                    {t("about.team.hans.name")}
-                  </h3>
-                  <p
-                    className="text-sm font-semibold mt-1"
-                    style={{ color: "oklch(0.72 0.16 75)" }}
-                  >
-                    {t("about.team.hans.role")}
-                  </p>
-                </div>
-              </div>
-              <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.70 0.03 250)" }}>
-                {t("about.team.hans.bio")}
-              </p>
-              <a
-                href="https://www.ubuntuleadershipprogram.nl/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
-                style={{ color: "oklch(0.65 0.04 250)" }}
-              >
-                <ExternalLink size={14} />
-                ubuntuleadershipprogram.nl
-              </a>
-            </div>
-
-          </div>
-
-          {/* Placeholder for remaining team members */}
-          <div
-            className="fade-up mt-8 p-6 rounded-xl text-center max-w-4xl mx-auto"
-            style={{ background: "oklch(0.26 0.055 250 / 0.5)", border: "1px dashed oklch(1 0 0 / 15%)" }}
-          >
-            <p className="text-sm" style={{ color: "oklch(0.55 0.03 250)" }}>
-              {t("about.team.more")}
-            </p>
           </div>
         </div>
       </section>
