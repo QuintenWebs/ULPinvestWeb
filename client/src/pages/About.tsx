@@ -175,118 +175,10 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 
-            {/* Rose Henry Cole */}
-            <div
-              className="fade-up card-lift p-8 rounded-xl"
-              style={{ background: "oklch(0.26 0.055 250)" }}
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <img
-                  src={ROSE_IMG}
-                  alt="Rose Henry Cole"
-                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                  style={{ objectPosition: "center top" }}
-                />
-                <div>
-                  <h3
-                    className="text-xl font-bold"
-                    style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
-                  >
-                    Rose Henry Cole
-                  </h3>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <a
-                  href="tel:+255622007120"
-                  className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
-                  style={{ color: "oklch(0.65 0.04 250)" }}
-                >
-                  <Phone size={14} />
-                  +255 622 007 120
-                </a>
-              </div>
-            </div>
-
-            {/* Nasra Kigombola */}
-            <div
-              className="fade-up card-lift p-8 rounded-xl"
-              style={{ background: "oklch(0.26 0.055 250)", transitionDelay: "100ms" }}
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <img
-                  src={NASRA_IMG}
-                  alt="Nasra Kigombola"
-                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                  style={{ objectPosition: "center top" }}
-                />
-                <div>
-                  <h3
-                    className="text-xl font-bold"
-                    style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
-                  >
-                    Nasra Kigombola
-                  </h3>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <a
-                  href="tel:+255655106424"
-                  className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
-                  style={{ color: "oklch(0.65 0.04 250)" }}
-                >
-                  <Phone size={14} />
-                  +255 65 510 6424
-                </a>
-              </div>
-            </div>
-
-            {/* Hans */}
-            <div
-              className="fade-up card-lift p-8 rounded-xl"
-              style={{ background: "oklch(0.26 0.055 250)", transitionDelay: "200ms" }}
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <img
-                  src={HANS_IMG}
-                  alt="Hans Valkenburg"
-                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                  style={{ objectPosition: "center top" }}
-                />
-                <div>
-                  <h3
-                    className="text-xl font-bold"
-                    style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
-                  >
-                    {t("about.team.hans.name")}
-                  </h3>
-                  <p
-                    className="text-sm font-semibold mt-1"
-                    style={{ color: "oklch(0.72 0.16 75)" }}
-                  >
-                    {t("about.team.hans.role")}
-                  </p>
-                </div>
-              </div>
-              <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.70 0.03 250)" }}>
-                {t("about.team.hans.bio")}
-              </p>
-              <a
-                href="https://www.ubuntuleadershipprogram.nl/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
-                style={{ color: "oklch(0.65 0.04 250)" }}
-              >
-                <ExternalLink size={14} />
-                ubuntuleadershipprogram.nl
-              </a>
-            </div>
-
             {/* Theo */}
             <div
               className="fade-up card-lift p-8 rounded-xl"
-              style={{ background: "oklch(0.26 0.055 250)", transitionDelay: "300ms" }}
+              style={{ background: "oklch(0.26 0.055 250)" }}
             >
               <div className="flex items-start gap-4 mb-6">
                 <img
@@ -329,6 +221,114 @@ export default function About() {
                 >
                   <Phone size={14} />
                   {t("about.team.theo.phone")}
+                </a>
+              </div>
+            </div>
+
+            {/* Hans */}
+            <div
+              className="fade-up card-lift p-8 rounded-xl"
+              style={{ background: "oklch(0.26 0.055 250)", transitionDelay: "100ms" }}
+            >
+              <div className="flex items-start gap-4 mb-6">
+                <img
+                  src={HANS_IMG}
+                  alt="Hans Valkenburg"
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  style={{ objectPosition: "center top" }}
+                />
+                <div>
+                  <h3
+                    className="text-xl font-bold"
+                    style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
+                  >
+                    {t("about.team.hans.name")}
+                  </h3>
+                  <p
+                    className="text-sm font-semibold mt-1"
+                    style={{ color: "oklch(0.72 0.16 75)" }}
+                  >
+                    {t("about.team.hans.role")}
+                  </p>
+                </div>
+              </div>
+              <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.70 0.03 250)" }}>
+                {t("about.team.hans.bio")}
+              </p>
+              <a
+                href="https://www.ubuntuleadershipprogram.nl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
+                style={{ color: "oklch(0.65 0.04 250)" }}
+              >
+                <ExternalLink size={14} />
+                ubuntuleadershipprogram.nl
+              </a>
+            </div>
+
+            {/* Rose Henry Cole */}
+            <div
+              className="fade-up card-lift p-8 rounded-xl"
+              style={{ background: "oklch(0.26 0.055 250)", transitionDelay: "200ms" }}
+            >
+              <div className="flex items-start gap-4 mb-6">
+                <img
+                  src={ROSE_IMG}
+                  alt="Rose Henry Cole"
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  style={{ objectPosition: "center top" }}
+                />
+                <div>
+                  <h3
+                    className="text-xl font-bold"
+                    style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
+                  >
+                    Rose Henry Cole
+                  </h3>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <a
+                  href="tel:+255622007120"
+                  className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
+                  style={{ color: "oklch(0.65 0.04 250)" }}
+                >
+                  <Phone size={14} />
+                  +255 622 007 120
+                </a>
+              </div>
+            </div>
+
+            {/* Nasra Kigombola */}
+            <div
+              className="fade-up card-lift p-8 rounded-xl"
+              style={{ background: "oklch(0.26 0.055 250)", transitionDelay: "300ms" }}
+            >
+              <div className="flex items-start gap-4 mb-6">
+                <img
+                  src={NASRA_IMG}
+                  alt="Nasra Kigombola"
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  style={{ objectPosition: "center top" }}
+                />
+                <div>
+                  <h3
+                    className="text-xl font-bold"
+                    style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
+                  >
+                    Nasra Kigombola
+                  </h3>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <a
+                  href="tel:+255655106424"
+                  className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
+                  style={{ color: "oklch(0.65 0.04 250)" }}
+                >
+                  <Phone size={14} />
+                  +255 65 510 6424
                 </a>
               </div>
             </div>
