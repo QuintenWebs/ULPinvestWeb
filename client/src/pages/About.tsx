@@ -286,6 +286,12 @@ export default function About() {
                   >
                     Rose Henry Cole
                   </h3>
+                  <p
+                    className="text-sm font-semibold mt-1"
+                    style={{ color: "oklch(0.72 0.16 75)" }}
+                  >
+                    Business Coach
+                  </p>
                 </div>
               </div>
               <div className="space-y-2">
@@ -319,6 +325,12 @@ export default function About() {
                   >
                     Nasra Kigombola
                   </h3>
+                  <p
+                    className="text-sm font-semibold mt-1"
+                    style={{ color: "oklch(0.72 0.16 75)" }}
+                  >
+                    Field Officer
+                  </p>
                 </div>
               </div>
               <div className="space-y-2">
