@@ -123,7 +123,7 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: "TZS 320,000", label: t("home.stats.invested") },
+              { value: "TZS 969,504,000", label: t("home.stats.invested"), year: "2026" },
               { value: "3", label: t("home.stats.businesses") },
               { value: "2021", label: t("home.stats.founded") },
               { value: t("home.stats.region.value"), label: t("home.stats.region") },
@@ -134,6 +134,9 @@ export default function Home() {
                   style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.14 0.06 250)" }}
                 >
                   {stat.value}
+                  {'year' in stat && stat.year && (
+                    <sup className="text-base font-semibold ml-1" style={{ color: "oklch(0.20 0.06 250)" }}>{stat.year}</sup>
+                  )}
                 </div>
                 <div className="text-sm font-semibold uppercase tracking-wide" style={{ color: "oklch(0.25 0.06 250)" }}>
                   {stat.label}
