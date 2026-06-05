@@ -9,10 +9,10 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/usambara-landscape-TxKRukdrenTyPFKVocwUJb.webp";
 
 // Team member photos
-const ROSE_IMG = "/manus-storage/9d3b89fe-825c-4d7b-bca7-a8c6b300e05f_a487b121.jpg";
-const NASRA_IMG = "/manus-storage/IMG_8870_5fc36b73.jpg";
-const HANS_IMG = "/manus-storage/pasted_file_YMsxUk_image_a25110e0.png";
-const THEO_IMG = "/manus-storage/pasted_file_ExXU15_image_fce01ff2.png";
+const ROSE_IMG = "/images/rose-henry-cole.jpg";
+const NASRA_IMG = "/images/nasra-kigombola.jpg";
+const HANS_IMG = "/images/hans-valkenburg.png";
+const THEO_IMG = "/images/theo-van-stuijvenberg.png";
 
 export default function About() {
   const { t } = useLanguage();
