@@ -1,0 +1,773 @@
+{
+  "nl": {
+    "nav": {
+      "entrepreneurs": "Voor Ondernemers",
+      "investors": "Voor Investeerders",
+      "about": "Over Ons",
+      "contact": "Contact",
+      "tagline": "Microlening, macro impact.",
+      "home": "Home"
+    },
+    "home": {
+      "hero": {
+        "label": "Usambara Mountains, Tanzania",
+        "title": "Kleine leningen,\ngrote kansen.",
+        "subtitle": "ULP Invest ondersteunt kleine ondernemers met microkredieten én persoonlijke begeleiding. Onderdeel van het Ubuntu Leadership Programma.",
+        "cta": {
+          "entrepreneurs": "Voor ondernemers",
+          "investors": "Voor investeerders"
+        }
+      },
+      "stats": {
+        "invested": "Totale investering",
+        "businesses": "Bedrijven ondersteund",
+        "regionLabel": "Regio",
+        "region": {
+          "value": "Usambara Mountains"
+        },
+        "founded": "Opgericht"
+      },
+      "whatwedo": {
+        "label": "Wat doen wij?",
+        "title": "Meer dan een lening",
+        "body": "Wij geloven dat iedereen het recht heeft om te ondernemen. Niet iedereen krijgt een kans bij de bank - maar met een goed idee, motivatie en de juiste steun kun je wél starten en groeien.",
+        "quote": "Kleine steun, groot verschil."
+      },
+      "micro": {
+        "label": "Wat is microfinanciering?",
+        "title": "Investeren in groei",
+        "body": "Microfinanciering betekent kleine leningen met een groot effect. Onze microkredieten geven je de kans om te investeren in je bedrijf.",
+        "item1": "Materiaal of gereedschap",
+        "item2": "Inrichting van je werkplek",
+        "item3": "Marketing of vervoer",
+        "item4": "Eerste voorraad voor je nieuwe zaak",
+        "range": "Leningen van €500 tot €50.000, met flexibele voorwaarden."
+      },
+      "why": {
+        "label": "Waarom het werkt",
+        "title": "Onze aanpak",
+        "item1": "Toegang tot kapitaal én kennis",
+        "item2": "Meer kans op duurzaam succes",
+        "item3": "Sterkere lokale economie",
+        "item4": "Zelfstandigheid en trots voor de ondernemer"
+      },
+      "cases": {
+        "label": "Voorbeeldprojecten",
+        "title": "Bedrijven die al groeien",
+        "subtitle": "Drie inspirerende voorbeelden van ondernemers die wij al ondersteunen in de Usambara Mountains.",
+        "case1": {
+          "title": "Houtbewerkingswerkplaats",
+          "desc": "Een lokale timmerman investeerde in professionele machines en een grotere werkplaats. Zijn bedrijf levert nu meubels aan hotels en particulieren in de regio.",
+          "tag": "Ambacht & Productie"
+        },
+        "case2": {
+          "title": "Guesthouse & Hospitality",
+          "desc": "Een jonge ondernemer opende een gastenhuis voor wandelaars en toeristen in de Usambara Mountains. Met begeleiding groeide het van 3 naar 8 kamers.",
+          "tag": "Toerisme & Hospitality"
+        },
+        "case3": {
+          "title": "Agrarische Verwerking",
+          "desc": "Een boerenfamilie investeerde in verwerkingsapparatuur voor lokale producten. Ze verkopen nu verwerkte goederen aan markten in Lushoto en omgeving.",
+          "tag": "Landbouw & Voeding"
+        },
+        "investment": "Investering",
+        "sector": "Sector"
+      },
+      "mission": {
+        "quote": "Samen bouwen we aan kansen in de Usambara Mountains."
+      }
+    },
+    "ent": {
+      "hero": {
+        "label": "Voor Ondernemers",
+        "title": "Heeft uw bedrijf groeipotentieel?",
+        "subtitle": "ULP Invest biedt microkredieten van €500 tot €50.000 én persoonlijke begeleiding voor kleine ondernemers in de Usambara Mountains.",
+        "cta": "Stuur ons uw plan"
+      },
+      "who": {
+        "label": "Voor wie?",
+        "title": "Wij zoeken ondernemers met ambitie",
+        "body": "Onze microkredieten en begeleiding zijn er voor kleine bedrijven die al actief zijn en willen groeien. Geen starters zonder plan, maar ondernemers met bewezen activiteit en een helder groeiverhaal.",
+        "item1": "Bestaand klein bedrijf met activiteit",
+        "item2": "Duidelijk plan voor groei",
+        "item3": "Bereid tot terugbetaling over 3–5 jaar",
+        "item4": "Gevestigd in de Usambara Mountains regio"
+      },
+      "loan": {
+        "label": "Financiering",
+        "title": "Eerlijke leningen, flexibele voorwaarden",
+        "body": "We verstrekken investeringen tussen €500 en €50.000 met een terugbetalingstermijn van 3 tot 5 jaar. Versneld aflossen is altijd mogelijk.",
+        "amount": "€500 – €50.000",
+        "term": "3 tot 5 jaar",
+        "early": "Versneld aflossen mogelijk",
+        "rate": "Eerlijke rente"
+      },
+      "support": {
+        "label": "Begeleiding op maat",
+        "title": "We laten je niet alleen staan",
+        "body": "Naast de lening krijg je persoonlijke begeleiding door onze coaches en adviseurs. We helpen je stap voor stap naar duurzaam succes.",
+        "item1": "Businessplan opstellen",
+        "item2": "Financiële administratie & boekhouding",
+        "item3": "Fiscale & juridische ondersteuning",
+        "item4": "Groeistrategie & marketingadvies",
+        "item5": "Toegang tot netwerk van ondernemers"
+      },
+      "apply": {
+        "label": "Aanvragen",
+        "title": "Klaar om te groeien?",
+        "body": "Stuur ons een e-mail met een korte beschrijving van uw bedrijf en uw groeiplanning. Wij nemen contact met u op.",
+        "cta": "Stuur uw aanvraag"
+      }
+    },
+    "inv": {
+      "hero": {
+        "label": "Voor Investeerders",
+        "title": "Investeer in mensen en potentieel",
+        "subtitle": "Draag bij aan economische ontwikkeling in Tanzania. Als lening, als gift, of als coach - elke bijdrage telt.",
+        "cta": "Neem contact op"
+      },
+      "why": {
+        "label": "Waarom investeren?",
+        "title": "Impact die je kunt zien",
+        "body": "ULP Invest werkt in een regio met enorm potentieel maar beperkte toegang tot kapitaal. Uw investering helpt ondernemers groeien, werkgelegenheid creëren en de lokale economie versterken.",
+        "item1": "Directe impact op lokale ondernemers",
+        "item2": "Werkgelegenheid in de Usambara regio",
+        "item3": "Economische ontwikkeling Tanzania",
+        "item4": "Jaarlijks bezoek aan de projecten mogelijk"
+      },
+      "risk": {
+        "label": "Eerlijk over risico",
+        "title": "Hoog risico, hoge impact",
+        "body": "We zijn eerlijk: dit is een complex gebied in ontwikkeling. Niet alle leningen zullen volledig worden terugbetaald. Daarom werken we met een mix van commerciële leningen en giften.",
+        "quote": "Uw investering is een daad van vertrouwen in mensen met een droom."
+      },
+      "loan": {
+        "label": "Lening verstrekken",
+        "title": "Lening aan ULP Invest",
+        "body": "U kunt een lening verstrekken aan ULP Invest. Wij stellen een leningsovereenkomst op en zorgen voor transparante rapportage.",
+        "rate": "Rente op Euribor-niveau",
+        "min": "Minimale looptijd: 5 jaar",
+        "pref": "Voorkeur: 10 jaar",
+        "cta": "E-mail ons voor een leningsovereenkomst"
+      },
+      "gift": {
+        "label": "Schenking",
+        "title": "Gift overmaken",
+        "body": "Een gift is ook zeer welkom. Maak over naar:",
+        "instruction": "Vermeld bij overboeking: ULP Invest – Gift",
+        "iban": "IBAN: NL56 RABO 0323 7422 70",
+        "name": "T.n.v.: Stichting Ubuntu Leadership Programma"
+      },
+      "coach": {
+        "label": "Coaching",
+        "title": "Deel uw expertise",
+        "body": "Heeft u ervaring in hospitality, houtbewerking, MKB-management, marketing of administratie? Dan kunt u ondernemers ook direct coachen tijdens een jaarlijks bezoek aan Tanzania.",
+        "visit": "Jaarlijks bezoek aan Tanzania mogelijk",
+        "cta": "Meld u aan als coach"
+      }
+    },
+    "about": {
+      "hero": {
+        "label": "Over Ons",
+        "title": "Onderdeel van het Ubuntu Leadership Programma",
+        "subtitle": "ULP Invest is één van de drie pijlers van het Ubuntu Leadership Programma - een initiatief dat jongeren en ondernemers in de Usambara Mountains ondersteunt."
+      },
+      "ulp": {
+        "label": "Ubuntu Leadership Programma",
+        "title": "Drie pijlers, één missie",
+        "body": "Het Ubuntu Leadership Programma verbindt onderwijs, leiderschap en economische ontwikkeling in Tanzania. Bezoek de hoofdwebsite voor meer informatie.",
+        "pillar1": {
+          "title": "Jaarlijkse Reis",
+          "desc": "Een jaarlijkse trip naar Tanzania waarbij deelnemers de regio bezoeken, projecten ontmoeten en bijdragen aan de gemeenschap."
+        },
+        "pillar2": {
+          "title": "Business School",
+          "desc": "Een traject voor jongeren in de Usambara Mountains: stageplekken, ondernemerschap en werkervaring zonder de regio te verlaten."
+        },
+        "pillar3": {
+          "title": "ULP Invest",
+          "desc": "Microkredieten en begeleiding voor kleine ondernemers met groeipotentieel in de Usambara Mountains."
+        },
+        "link": "Bezoek ubuntuleadershipprogram.nl"
+      },
+      "team": {
+        "label": "Ons Team",
+        "more": "+ 3 teamleden - profielen volgen binnenkort.",
+        "title": "De mensen achter ULP Invest",
+        "theo": {
+          "name": "Theo van Stuijvenberg",
+          "role": "Fondsbeheerder ULP Invest",
+          "bio": "Theo is fondsbeheerder van ULP Invest en aanspreekpunt voor investeerders. Samen met het team is hij verantwoordelijk voor het beheer van het investeringsfonds, communicatie met investeerders en de financiële monitoring van investeringen.",
+          "phone": "06 29550134"
+        },
+        "hans": {
+          "name": "Hans Valkenburg",
+          "role": "Oprichter Ubuntu Leadership Program",
+          "bio": "Hans is oprichter van het Ubuntu Leadership Program, de moederorganisatie van ULP Invest. Vanuit deze rol is hij betrokken bij de visie en strategie van ULP Invest en de ontwikkeling van ondernemerschap in Tanzania."
+        }
+      },
+      "pillar": {
+        "active": "Dit zijn wij"
+      },
+      "mission": {
+        "label": "Onze Missie",
+        "title": "Microlening, macro impact.",
+        "body": "We geven mensen niet alleen financiële steun, maar ook het vertrouwen en de kennis om hun toekomst zelf in handen te nemen. Samen bouwen we aan kansen in de Usambara Mountains."
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "E-mail ons",
+      "phone": "Telefoon / WhatsApp",
+      "website": "Hoofdwebsite ULP",
+      "follow": "Volg ons"
+    },
+    "footer": {
+      "tagline": "Microlening, macro impact.",
+      "part_of": "Onderdeel van het",
+      "rights": "Alle rechten voorbehouden.",
+      "entrepreneurs": "Voor Ondernemers",
+      "investors": "Voor Investeerders",
+      "about": "Over Ons",
+      "contact": "Contact",
+      "nav": {
+        "heading": "Navigatie"
+      },
+      "ulp": {
+        "program": "Het Programma",
+        "contact": "Contact ULP"
+      }
+    },
+    "tag": {
+      "businessplan": "Businessplan",
+      "administration": "Administratie",
+      "legal": "Juridisch",
+      "marketing": "Marketing",
+      "network": "Netwerk",
+      "incubatorLabel": "Incubator",
+      "incubator": {
+        "desc": "Een incubator-omgeving voor groeiende ondernemers."
+      }
+    },
+    "invest": {
+      "how": "Hoe kunt u bijdragen?",
+      "three_ways": "Drie manieren van investeren",
+      "contact": "Neem contact op"
+    },
+    "homeLabel": "Home"
+  },
+  "en": {
+    "nav": {
+      "entrepreneurs": "For Entrepreneurs",
+      "investors": "For Investors",
+      "about": "About Us",
+      "contact": "Contact",
+      "tagline": "Microloan, macro impact.",
+      "home": "Home"
+    },
+    "home": {
+      "hero": {
+        "label": "Usambara Mountains, Tanzania",
+        "title": "Microloans,\nbig opportunities.",
+        "subtitle": "ULP Invest supports small entrepreneurs with microloans and personal coaching. Part of the Ubuntu Leadership Program.",
+        "cta": {
+          "entrepreneurs": "For entrepreneurs",
+          "investors": "For investors"
+        }
+      },
+      "stats": {
+        "invested": "Total Investment",
+        "businesses": "Businesses supported",
+        "regionLabel": "Region",
+        "region": {
+          "value": "Usambara Mountains"
+        },
+        "founded": "Founded"
+      },
+      "whatwedo": {
+        "label": "What do we do?",
+        "title": "More than a loan",
+        "body": "We think everyone has the right to entrepreneurship. Not everyone gets a chance at the bank - but with a good idea, motivation and the right support, you can start and grow.",
+        "quote": "Small support, big difference."
+      },
+      "micro": {
+        "label": "What is microfinance?",
+        "title": "Investing in growth",
+        "body": "Microfinance means microloans with a big effect. Our microloans give you the opportunity to invest in your business.",
+        "item1": "Materials or tools",
+        "item2": "Setting up your workspace",
+        "item3": "Marketing or transport",
+        "item4": "First stock for your new business",
+        "range": "Loans from €500 to €50,000, with flexible terms."
+      },
+      "why": {
+        "label": "Why it works",
+        "title": "Our approach",
+        "item1": "Access to capital and knowledge",
+        "item2": "Greater chance of sustainable success",
+        "item3": "Stronger local economy",
+        "item4": "Independence and pride for the entrepreneur"
+      },
+      "cases": {
+        "label": "Example Projects",
+        "title": "Businesses already growing",
+        "subtitle": "Three inspiring examples of entrepreneurs we already support in the Usambara Mountains.",
+        "case1": {
+          "title": "Woodworking Workshop",
+          "desc": "A local carpenter invested in professional machines and a larger workshop. His business now supplies furniture to hotels and private clients in the region.",
+          "tag": "Craft & Production"
+        },
+        "case2": {
+          "title": "Guesthouse & Hospitality",
+          "desc": "A young entrepreneur opened a guesthouse for hikers and tourists in the Usambara Mountains. With coaching, it grew from 3 to 8 rooms.",
+          "tag": "Tourism & Hospitality"
+        },
+        "case3": {
+          "title": "Agricultural Processing",
+          "desc": "A farming family invested in processing equipment for local produce. They now sell processed goods to markets in Lushoto and surrounding areas.",
+          "tag": "Agriculture & Food"
+        },
+        "investment": "Investment",
+        "sector": "Sector"
+      },
+      "mission": {
+        "quote": "Together we build opportunities in the Usambara Mountains."
+      }
+    },
+    "ent": {
+      "hero": {
+        "label": "For Entrepreneurs",
+        "title": "Does your business have growth potential?",
+        "subtitle": "ULP Invest offers microloans from €500 to €50,000 and personal coaching for small entrepreneurs in the Usambara Mountains.",
+        "cta": "Send us your plan"
+      },
+      "who": {
+        "label": "Who is it for?",
+        "title": "We look for ambitious entrepreneurs",
+        "body": "Our microloans and coaching are for small businesses that are already active and want to grow. Not starters without a plan, but entrepreneurs with proven activity and a clear growth story.",
+        "item1": "Existing small business with activity",
+        "item2": "Clear plan for growth",
+        "item3": "Willing to repay over 3–5 years",
+        "item4": "Based in the Usambara Mountains region"
+      },
+      "loan": {
+        "label": "Financing",
+        "title": "Fair loans, flexible terms",
+        "body": "We provide investments between €500 and €50,000 with a repayment period of 3 to 5 years. Early repayment is always possible.",
+        "amount": "€500 – €50,000",
+        "term": "3 to 5 years",
+        "early": "Early repayment possible",
+        "rate": "Fair interest rate"
+      },
+      "support": {
+        "label": "Tailored support",
+        "title": "We don't leave you alone",
+        "body": "In addition to the loan, you receive personal coaching from our coaches and advisors. We help you step by step toward sustainable success.",
+        "item1": "Business plan development",
+        "item2": "Financial administration & bookkeeping",
+        "item3": "Tax & legal support",
+        "item4": "Growth strategy & marketing advice",
+        "item5": "Access to entrepreneur network"
+      },
+      "apply": {
+        "label": "Apply",
+        "title": "Ready to grow?",
+        "body": "Send us an email with a brief description of your business and your growth plan. We will get in touch.",
+        "cta": "Send your application"
+      }
+    },
+    "inv": {
+      "hero": {
+        "label": "For Investors",
+        "title": "Invest in people and potential",
+        "subtitle": "Contribute to economic development in Tanzania. As a loan, as a gift, or as a coach - every contribution counts.",
+        "cta": "Get in touch"
+      },
+      "why": {
+        "label": "Why invest?",
+        "title": "Impact you can see",
+        "body": "ULP Invest works in a region with enormous potential but limited access to capital. Your investment helps entrepreneurs grow, creates jobs and strengthens the local economy.",
+        "item1": "Direct impact on local entrepreneurs",
+        "item2": "Employment in the Usambara region",
+        "item3": "Economic development Tanzania",
+        "item4": "Annual visit to the projects possible"
+      },
+      "risk": {
+        "label": "Clear about risk",
+        "title": "High risk, high impact",
+        "body": "We are clear: this is a complex developing region. Not all loans will be fully repaid. That is why we work with a mix of commercial loans and gifts.",
+        "quote": "Your investment is an act of trust in people with a dream."
+      },
+      "loan": {
+        "label": "Provide a loan",
+        "title": "Loan to ULP Invest",
+        "body": "You can provide a loan to ULP Invest. We draw up a loan agreement and ensure transparent reporting.",
+        "rate": "Interest at Euribor level",
+        "min": "Minimum term: 5 years",
+        "pref": "Preferred: 10 years",
+        "cta": "Email us for a loan agreement"
+      },
+      "gift": {
+        "label": "Donation",
+        "title": "Make a donation",
+        "body": "A donation is also very welcome. Transfer to:",
+        "instruction": "Please state: ULP Invest – Gift",
+        "iban": "IBAN: NL56 RABO 0323 7422 70",
+        "name": "Payable to: Stichting Ubuntu Leadership Programma"
+      },
+      "coach": {
+        "label": "Coaching",
+        "title": "Share your expertise",
+        "body": "Do you have experience in hospitality, woodworking, SME management, marketing or administration? You get support from ULP Invest because cross-cultural coaching is a challenge; a hit-and-run approach is highly unproductive.",
+        "visit": "Annual visit to Tanzania possible",
+        "cta": "Register as a coach"
+      }
+    },
+    "about": {
+      "hero": {
+        "label": "About Us",
+        "title": "Part of the Ubuntu Leadership Program",
+        "subtitle": "ULP Invest is one of the three pillars of the Ubuntu Leadership Program - an initiative that supports young people and entrepreneurs in the Usambara Mountains."
+      },
+      "ulp": {
+        "label": "Ubuntu Leadership Program",
+        "title": "Three pillars, one mission",
+        "body": "The Ubuntu Leadership Program connects education, leadership and economic development in Tanzania. Visit the main website for more information.",
+        "pillar1": {
+          "title": "Annual Trip",
+          "desc": "An annual trip to Tanzania where participants visit the region, meet projects and contribute to the community."
+        },
+        "pillar2": {
+          "title": "Business School",
+          "desc": "A program for young people in the Usambara Mountains: internships, entrepreneurship and work experience without leaving the region."
+        },
+        "pillar3": {
+          "title": "ULP Invest",
+          "desc": "Microloans and coaching for small entrepreneurs with growth potential in the Usambara Mountains."
+        },
+        "link": "Visit ubuntuleadershipprogram.nl"
+      },
+      "team": {
+        "label": "Our Team",
+        "more": "+ 3 team members - profiles coming soon.",
+        "title": "The people behind ULP Invest",
+        "theo": {
+          "name": "Theo van Stuijvenberg",
+          "role": "Fund Manager ULP Invest",
+          "bio": "Theo is fund manager of ULP Invest and the point of contact for investors. Together with the team he is responsible for managing the investment fund, communicating with investors and financial monitoring of investments.",
+          "phone": "06 29550134"
+        },
+        "hans": {
+          "name": "Hans Valkenburg",
+          "role": "Founder Ubuntu Leadership Program",
+          "bio": "Hans is the founder of the Ubuntu Leadership Program, the parent organization of ULP Invest. In this role, he is involved in the vision and strategy of ULP Invest and the development of entrepreneurship in Tanzania."
+        }
+      },
+      "pillar": {
+        "active": "This is us"
+      },
+      "mission": {
+        "label": "Our Mission",
+        "title": "Microloan, macro impact.",
+        "body": "We give people not only financial support, but also the confidence and knowledge to take their future into their own hands. Together we build opportunities in the Usambara Mountains."
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email us",
+      "phone": "Phone / WhatsApp",
+      "website": "ULP Main Website",
+      "follow": "Follow us"
+    },
+    "footer": {
+      "tagline": "Microloan, macro impact.",
+      "part_of": "Part of the",
+      "rights": "All rights reserved.",
+      "entrepreneurs": "For Entrepreneurs",
+      "investors": "For Investors",
+      "about": "About Us",
+      "contact": "Contact",
+      "nav": {
+        "heading": "Navigation"
+      },
+      "ulp": {
+        "program": "The Program",
+        "contact": "Contact ULP"
+      }
+    },
+    "tag": {
+      "businessplan": "Business Plan",
+      "administration": "Administration",
+      "legal": "Legal",
+      "marketing": "Marketing",
+      "network": "Network",
+      "incubatorLabel": "Incubator",
+      "incubator": {
+        "desc": "An incubator environment for growing entrepreneurs."
+      }
+    },
+    "invest": {
+      "how": "How can you contribute?",
+      "three_ways": "Three ways to invest",
+      "contact": "Get in touch"
+    },
+    "homeLabel": "Home"
+  },
+  "sw": {
+    "nav": {
+      "entrepreneurs": "Kwa Wajasiriamali",
+      "investors": "Kwa Wawekezaji",
+      "about": "Kuhusu Sisi",
+      "contact": "Wasiliana",
+      "home": "Nyumbani",
+      "tagline": "Mkopo mdogo, athari kubwa."
+    },
+    "home": {
+      "hero": {
+        "label": "Milima ya Usambara, Tanzania",
+        "title": "Mikopo midogo,\nfursa kubwa.",
+        "subtitle": "ULP Invest inasaidia wajasiriamali wadogo kwa mikopo na mwongozo wa kibinafsi. Sehemu ya Programu ya Uongozi ya Ubuntu.",
+        "cta": {
+          "entrepreneurs": "Kwa wajasiriamali",
+          "investors": "Kwa wawekezaji"
+        }
+      },
+      "stats": {
+        "invested": "Jumla ya Uwekezaji",
+        "businesses": "Biashara zilizosaidiwa",
+        "regionLabel": "Mkoa",
+        "region": {
+          "value": "Milima ya Usambara"
+        },
+        "founded": "Ilianzishwa"
+      },
+      "whatwedo": {
+        "label": "Tunafanya nini?",
+        "title": "Zaidi ya mkopo",
+        "body": "Tunaamini kila mtu ana haki ya kufanya biashara. Si kila mtu anapata nafasi benki - lakini kwa wazo zuri, motisha na msaada sahihi, unaweza kuanza na kukua.",
+        "quote": "Msaada mdogo, tofauti kubwa."
+      },
+      "micro": {
+        "label": "Ufadhili mdogo ni nini?",
+        "title": "Kuwekeza katika ukuaji",
+        "body": "Ufadhili mdogo unamaanisha mikopo midogo yenye athari kubwa. Mikopo yetu inakupa fursa ya kuwekeza katika biashara yako.",
+        "item1": "Vifaa au zana",
+        "item2": "Kuandaa mahali pa kazi",
+        "item3": "Masoko au usafiri",
+        "item4": "Hifadhi ya kwanza kwa biashara yako mpya",
+        "range": "Mikopo kuanzia €500 hadi €50,000, kwa masharti ya kubadilika."
+      },
+      "why": {
+        "label": "Kwa nini inafanya kazi",
+        "title": "Mbinu yetu",
+        "item1": "Upatikanaji wa mtaji na maarifa",
+        "item2": "Nafasi kubwa ya mafanikio endelevu",
+        "item3": "Uchumi wa ndani wenye nguvu",
+        "item4": "Uhuru na kiburi kwa mjasiriamali"
+      },
+      "cases": {
+        "label": "Miradi ya Mfano",
+        "title": "Biashara zinazokua tayari",
+        "subtitle": "Mifano mitatu ya kuvutia ya wajasiriamali tunaowasiliana nao katika Milima ya Usambara.",
+        "case1": {
+          "title": "Warsha ya Useremala",
+          "desc": "Seremala wa ndani aliwekeza katika mashine za kitaalamu na warsha kubwa. Biashara yake sasa inasambaza samani kwa hoteli na wateja binafsi katika mkoa.",
+          "tag": "Ufundi & Uzalishaji"
+        },
+        "case2": {
+          "title": "Nyumba ya Wageni & Utalii",
+          "desc": "Mjasiriamali mdogo alifungua nyumba ya wageni kwa waandaaji na watalii katika Milima ya Usambara. Kwa mwongozo, ilikua kutoka vyumba 3 hadi 8.",
+          "tag": "Utalii & Ukarimu"
+        },
+        "case3": {
+          "title": "Usindikaji wa Kilimo",
+          "desc": "Familia ya wakulima iliwekeza katika vifaa vya kusindika mazao ya ndani. Sasa wanauza bidhaa zilizosindikwa kwa masoko huko Lushoto na maeneo ya jirani.",
+          "tag": "Kilimo & Chakula"
+        },
+        "investment": "Uwekezaji",
+        "sector": "Sekta"
+      },
+      "mission": {
+        "quote": "Pamoja tunajenga fursa katika Milima ya Usambara."
+      }
+    },
+    "ent": {
+      "hero": {
+        "label": "Kwa Wajasiriamali",
+        "title": "Je, biashara yako ina uwezo wa kukua?",
+        "subtitle": "ULP Invest inatoa mikopo kuanzia €500 hadi €50,000 na mwongozo wa kibinafsi kwa wajasiriamali wadogo katika Milima ya Usambara.",
+        "cta": "Tutumie mpango wako"
+      },
+      "who": {
+        "label": "Kwa nani?",
+        "title": "Tunatafuta wajasiriamali wenye tamaa",
+        "body": "Mikopo na mwongozo wetu ni kwa biashara ndogo ambazo tayari zinafanya kazi na zinataka kukua. Si wanaoanza bila mpango, bali wajasiriamali wenye shughuli iliyothibitishwa.",
+        "item1": "Biashara ndogo iliyopo yenye shughuli",
+        "item2": "Mpango wazi wa ukuaji",
+        "item3": "Tayari kulipa kwa miaka 3–5",
+        "item4": "Ipo katika mkoa wa Milima ya Usambara"
+      },
+      "loan": {
+        "label": "Ufadhili",
+        "title": "Mikopo ya haki, masharti ya kubadilika",
+        "body": "Tunatoa uwekezaji kati ya €500 na €50,000 na muda wa kulipa wa miaka 3 hadi 5. Kulipa mapema daima kunawezekana.",
+        "amount": "€500 – €50,000",
+        "term": "Miaka 3 hadi 5",
+        "early": "Kulipa mapema kunawezekana",
+        "rate": "Riba ya haki"
+      },
+      "support": {
+        "label": "Msaada wa kibinafsi",
+        "title": "Hatukuachi peke yako",
+        "body": "Pamoja na mkopo, unapata mwongozo wa kibinafsi kutoka kwa washauri wetu. Tunakusaidia hatua kwa hatua kuelekea mafanikio endelevu.",
+        "item1": "Kuandaa mpango wa biashara",
+        "item2": "Usimamizi wa fedha na uhasibu",
+        "item3": "Msaada wa kisheria na kodi",
+        "item4": "Mkakati wa ukuaji na ushauri wa masoko",
+        "item5": "Upatikanaji wa mtandao wa wajasiriamali"
+      },
+      "apply": {
+        "label": "Omba",
+        "title": "Uko tayari kukua?",
+        "body": "Tutumie barua pepe na maelezo mafupi ya biashara yako na mpango wako wa ukuaji. Tutawasiliana nawe.",
+        "cta": "Tuma ombi lako"
+      }
+    },
+    "inv": {
+      "hero": {
+        "label": "Kwa Wawekezaji",
+        "title": "Wekeza kwa watu na uwezo",
+        "subtitle": "Changia maendeleo ya kiuchumi Tanzania. Kama mkopo, kama zawadi, au kama kocha - kila mchango unahesabu.",
+        "cta": "Wasiliana nasi"
+      },
+      "why": {
+        "label": "Kwa nini kuwekeza?",
+        "title": "Athari unayoweza kuona",
+        "body": "ULP Invest inafanya kazi katika mkoa wenye uwezo mkubwa lakini upatikanaji mdogo wa mtaji. Uwekezaji wako unasaidia wajasiriamali kukua, kuunda ajira na kuimarisha uchumi wa ndani.",
+        "item1": "Athari ya moja kwa moja kwa wajasiriamali wa ndani",
+        "item2": "Ajira katika mkoa wa Usambara",
+        "item3": "Maendeleo ya kiuchumi Tanzania",
+        "item4": "Ziara ya kila mwaka kwa miradi inawezekana"
+      },
+      "risk": {
+        "label": "Uwazi kuhusu hatari",
+        "title": "Hatari kubwa, athari kubwa",
+        "body": "Tunakuwa wazi: hii ni mkoa mgumu unaoendelea. Si mikopo yote italipwa kikamilifu. Ndiyo maana tunafanya kazi na mchanganyiko wa mikopo ya kibiashara na zawadi.",
+        "quote": "Uwekezaji wako ni kitendo cha imani kwa watu wenye ndoto."
+      },
+      "loan": {
+        "label": "Toa mkopo",
+        "title": "Mkopo kwa ULP Invest",
+        "body": "Unaweza kutoa mkopo kwa ULP Invest. Tutaandaa mkataba wa mkopo na kuhakikisha ripoti ya uwazi.",
+        "rate": "Riba katika kiwango cha Euribor",
+        "min": "Muda wa chini: miaka 5",
+        "pref": "Inayopendelewa: miaka 10",
+        "cta": "Tutumie barua pepe kwa mkataba wa mkopo"
+      },
+      "gift": {
+        "label": "Mchango",
+        "title": "Toa mchango",
+        "body": "Mchango pia unakaribishwa sana. Hamisha kwa:",
+        "instruction": "Taja: ULP Invest – Zawadi",
+        "iban": "IBAN: NL56 RABO 0323 7422 70",
+        "name": "Kwa: Stichting Ubuntu Leadership Programma"
+      },
+      "coach": {
+        "label": "Mafunzo",
+        "title": "Shiriki utaalamu wako",
+        "body": "Je, una uzoefu katika ukarimu, useremala, usimamizi wa biashara ndogo, masoko au uhasibu? Unaweza pia kufundisha wajasiriamali moja kwa moja wakati wa ziara ya kila mwaka Tanzania.",
+        "visit": "Ziara ya kila mwaka Tanzania inawezekana",
+        "cta": "Jiandikishe kama kocha"
+      }
+    },
+    "about": {
+      "hero": {
+        "label": "Kuhusu Sisi",
+        "title": "Sehemu ya Programu ya Uongozi ya Ubuntu",
+        "subtitle": "ULP Invest ni moja ya nguzo tatu za Programu ya Uongozi ya Ubuntu - mpango unaosaidia vijana na wajasiriamali katika Milima ya Usambara."
+      },
+      "ulp": {
+        "label": "Programu ya Uongozi ya Ubuntu",
+        "title": "Nguzo tatu, dhamira moja",
+        "body": "Programu ya Uongozi ya Ubuntu inaunganisha elimu, uongozi na maendeleo ya kiuchumi Tanzania. Tembelea tovuti kuu kwa maelezo zaidi.",
+        "pillar1": {
+          "title": "Safari ya Kila Mwaka",
+          "desc": "Safari ya kila mwaka Tanzania ambapo washiriki wanatembelea mkoa, kukutana na miradi na kuchangia jamii."
+        },
+        "pillar2": {
+          "title": "Shule ya Biashara",
+          "desc": "Mpango kwa vijana katika Milima ya Usambara: mafunzo, ujasiriamali na uzoefu wa kazi bila kuacha mkoa."
+        },
+        "pillar3": {
+          "title": "ULP Invest",
+          "desc": "Mikopo na mwongozo kwa wajasiriamali wadogo wenye uwezo wa kukua katika Milima ya Usambara."
+        },
+        "link": "Tembelea ubuntuleadershipprogram.nl"
+      },
+      "team": {
+        "label": "Timu Yetu",
+        "more": "+ wanachama 3 wa timu - wasifu unakuja hivi karibuni.",
+        "title": "Watu nyuma ya ULP Invest",
+        "theo": {
+          "name": "Theo van Stuijvenberg",
+          "role": "Msimamizi wa Mfuko wa ULP Invest",
+          "bio": "Theo ni msimamizi wa mfuko wa ULP Invest na mtu wa kuwasiliana naye kwa wawekezaji. Pamoja na timu, anawajibika kwa usimamizi wa mfuko wa uwekezaji, mawasiliano na wawekezaji na ufuatiliaji wa fedha.",
+          "phone": "06 29550134"
+        },
+        "hans": {
+          "name": "Hans Valkenburg",
+          "role": "Mwanzilishi wa Programu ya Uongozi ya Ubuntu",
+          "bio": "Hans ni mwanzilishi wa Programu ya Uongozi ya Ubuntu, shirika mama la ULP Invest. Katika jukumu hili, anahusika na maono na mkakati wa ULP Invest na maendeleo ya ujasiriamali Tanzania."
+        }
+      },
+      "pillar": {
+        "active": "Hii ni sisi"
+      },
+      "mission": {
+        "label": "Dhamira Yetu",
+        "title": "Mkopo mdogo, athari kubwa.",
+        "body": "Tunatoa watu si tu msaada wa kifedha, bali pia imani na maarifa ya kuchukua mustakabali wao mikononi mwao. Pamoja tunajenga fursa katika Milima ya Usambara."
+      }
+    },
+    "contact": {
+      "title": "Wasiliana",
+      "email": "Tutumie barua pepe",
+      "phone": "Simu / WhatsApp",
+      "website": "Tovuti Kuu ya ULP",
+      "follow": "Tufuate"
+    },
+    "footer": {
+      "tagline": "Mkopo mdogo, athari kubwa.",
+      "part_of": "Sehemu ya",
+      "rights": "Haki zote zimehifadhiwa.",
+      "entrepreneurs": "Kwa Wajasiriamali",
+      "investors": "Kwa Wawekezaji",
+      "about": "Kuhusu Sisi",
+      "contact": "Wasiliana",
+      "nav": {
+        "heading": "Urambazaji"
+      },
+      "ulp": {
+        "program": "Programu",
+        "contact": "Wasiliana ULP"
+      }
+    },
+    "tag": {
+      "businessplan": "Mpango wa Biashara",
+      "administration": "Utawala",
+      "legal": "Kisheria",
+      "marketing": "Marketing",
+      "network": "Mtandao",
+      "incubatorLabel": "Inkubeta",
+      "incubator": {
+        "desc": "Mazingira ya inkubeta kwa wajasiriamali wanaoota."
+      }
+    },
+    "invest": {
+      "how": "Unaweza kuchangia vipi?",
+      "three_ways": "Njia tatu za kuwekeza",
+      "contact": "Wasiliana nasi"
+    },
+    "homeLabel": "Nyumbani"
+  }
+}

@@ -7,7 +7,7 @@ import { Mail, Phone, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, field } = useLanguage();
 
   return (
     <footer style={{ background: "oklch(0.12 0.055 250)" }} className="border-t">
@@ -44,7 +44,7 @@ export default function Footer() {
             <p
               className="text-lg font-semibold mt-4"
               style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.72 0.16 75)" }}
-            >
+             data-cms-field={field("footer.tagline")}>
               {t("footer.tagline")}
             </p>
 
@@ -84,7 +84,7 @@ export default function Footer() {
             <h4
               className="text-xs font-bold uppercase tracking-widest mb-4"
               style={{ color: "oklch(0.72 0.16 75)" }}
-            >
+             data-cms-field={field("footer.nav.heading")}>
               {t("footer.nav.heading")}
             </h4>
             <ul className="flex flex-col gap-2">

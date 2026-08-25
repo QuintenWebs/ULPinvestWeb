@@ -9,7 +9,7 @@ import { Menu, X } from "lucide-react";
 import { useLanguage, Language } from "@/contexts/LanguageContext";
 
 export default function Navbar() {
-  const { lang, setLang, t } = useLanguage();
+  const { lang, setLang, t, field } = useLanguage();
   const [location] = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -46,7 +46,7 @@ export default function Navbar() {
               <span className="font-bold text-base tracking-wide" style={{ color: "oklch(0.95 0.01 250)", fontFamily: "'Fraunces', serif" }}>
                 ULP Invest
               </span>
-              <span className="text-xs" style={{ color: "oklch(0.65 0.04 250)" }}>
+              <span className="text-xs" style={{ color: "oklch(0.65 0.04 250)" }} data-cms-field={field("nav.tagline")}>
                 {t("nav.tagline")}
               </span>
             </div>

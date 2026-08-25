@@ -11,7 +11,7 @@ const ENTREPRENEUR_IMG = "/images/coaching.jpg";
 const WOODWORKING_IMG = "/images/woodworking.jpg";
 
 export default function Entrepreneurs() {
-  const { t } = useLanguage();
+  const { t, field } = useLanguage();
   const revealRef = useScrollReveal();
 
   const whoItems = [
@@ -57,19 +57,19 @@ export default function Entrepreneurs() {
             <span
               className="text-xs font-bold uppercase tracking-widest"
               style={{ color: "oklch(0.72 0.16 75)" }}
-            >
+             data-cms-field={field("ent.hero.label")}>
               {t("ent.hero.label")}
             </span>
             <h1
               className="text-4xl md:text-6xl font-bold mt-3 mb-6 leading-tight"
               style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.97 0.01 250)" }}
-            >
+             data-cms-field={field("ent.hero.title")}>
               {t("ent.hero.title")}
             </h1>
             <p
               className="text-lg mb-8 leading-relaxed"
               style={{ color: "oklch(0.80 0.02 250)" }}
-            >
+             data-cms-field={field("ent.hero.subtitle")}>
               {t("ent.hero.subtitle")}
             </p>
             <a
@@ -90,19 +90,19 @@ export default function Entrepreneurs() {
               <span
                 className="fade-up text-xs font-bold uppercase tracking-widest"
                 style={{ color: "oklch(0.72 0.16 75)" }}
-              >
+               data-cms-field={field("ent.who.label")}>
                 {t("ent.who.label")}
               </span>
               <h2
                 className="fade-up text-4xl md:text-5xl font-bold mt-3 mb-6 leading-tight"
                 style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)", transitionDelay: "60ms" }}
-              >
+               data-cms-field={field("ent.who.title")}>
                 {t("ent.who.title")}
               </h2>
               <p
                 className="fade-up text-lg leading-relaxed"
                 style={{ color: "oklch(0.75 0.03 250)", transitionDelay: "120ms" }}
-              >
+               data-cms-field={field("ent.who.body")}>
                 {t("ent.who.body")}
               </p>
             </div>
@@ -137,13 +137,13 @@ export default function Entrepreneurs() {
             <span
               className="fade-up text-xs font-bold uppercase tracking-widest"
               style={{ color: "oklch(0.72 0.16 75)" }}
-            >
+             data-cms-field={field("ent.loan.label")}>
               {t("ent.loan.label")}
             </span>
             <h2
               className="fade-up text-4xl md:text-5xl font-bold mt-3"
               style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)", transitionDelay: "60ms" }}
-            >
+             data-cms-field={field("ent.loan.title")}>
               {t("ent.loan.title")}
             </h2>
           </div>
@@ -183,7 +183,7 @@ export default function Entrepreneurs() {
             className="fade-up p-8 rounded-xl gold-border-left max-w-3xl mx-auto"
             style={{ background: "oklch(0.26 0.055 250)" }}
           >
-            <p className="text-lg leading-relaxed" style={{ color: "oklch(0.80 0.02 250)" }}>
+            <p className="text-lg leading-relaxed" style={{ color: "oklch(0.80 0.02 250)" }} data-cms-field={field("ent.loan.body")}>
               {t("ent.loan.body")}
             </p>
           </div>
@@ -198,19 +198,19 @@ export default function Entrepreneurs() {
               <span
                 className="fade-up text-xs font-bold uppercase tracking-widest"
                 style={{ color: "oklch(0.72 0.16 75)" }}
-              >
+               data-cms-field={field("ent.support.label")}>
                 {t("ent.support.label")}
               </span>
               <h2
                 className="fade-up text-4xl md:text-5xl font-bold mt-3 mb-6 leading-tight"
                 style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)", transitionDelay: "60ms" }}
-              >
+               data-cms-field={field("ent.support.title")}>
                 {t("ent.support.title")}
               </h2>
               <p
                 className="fade-up text-lg leading-relaxed mb-8"
                 style={{ color: "oklch(0.75 0.03 250)", transitionDelay: "120ms" }}
-              >
+               data-cms-field={field("ent.support.body")}>
                 {t("ent.support.body")}
               </p>
 
@@ -240,13 +240,13 @@ export default function Entrepreneurs() {
                 <div
                   className="text-3xl mb-4"
                   style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.72 0.16 75 / 0.4)" }}
-                >
-                  {t("tag.incubator")}
+                 data-cms-field={field("tag.incubatorLabel")}>
+                  {t("tag.incubatorLabel")}
                 </div>
                 <p
                   className="text-2xl font-semibold leading-snug mb-6"
                   style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.85 0.02 250)" }}
-                >
+                 data-cms-field={field("tag.incubator.desc")}>
                   {t("tag.incubator.desc")}
                 </p>
                 <div className="space-y-3">
@@ -275,19 +275,19 @@ export default function Entrepreneurs() {
           <span
             className="fade-up text-xs font-bold uppercase tracking-widest"
             style={{ color: "oklch(0.25 0.06 250)" }}
-          >
+           data-cms-field={field("ent.apply.label")}>
             {t("ent.apply.label")}
           </span>
           <h2
             className="fade-up text-4xl md:text-5xl font-bold mt-3 mb-6"
             style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.14 0.06 250)", transitionDelay: "60ms" }}
-          >
+           data-cms-field={field("ent.apply.title")}>
             {t("ent.apply.title")}
           </h2>
           <p
             className="fade-up text-lg mb-8 max-w-xl mx-auto"
             style={{ color: "oklch(0.25 0.06 250)", transitionDelay: "120ms" }}
-          >
+           data-cms-field={field("ent.apply.body")}>
             {t("ent.apply.body")}
           </p>
           <a

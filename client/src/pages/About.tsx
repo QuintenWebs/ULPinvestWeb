@@ -15,7 +15,7 @@ const HANS_IMG = "/images/hans-valkenburg.png";
 const THEO_IMG = "/images/theo-van-stuijvenberg.png";
 
 export default function About() {
-  const { t } = useLanguage();
+  const { t, field } = useLanguage();
   const revealRef = useScrollReveal();
 
   const pillars = [
@@ -60,19 +60,19 @@ export default function About() {
           <span
             className="text-xs font-bold uppercase tracking-widest"
             style={{ color: "oklch(0.72 0.16 75)" }}
-          >
+           data-cms-field={field("about.hero.label")}>
             {t("about.hero.label")}
           </span>
           <h1
             className="text-4xl md:text-6xl font-bold mt-3 mb-6 leading-tight max-w-3xl mx-auto"
             style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.97 0.01 250)" }}
-          >
+           data-cms-field={field("about.hero.title")}>
             {t("about.hero.title")}
           </h1>
           <p
             className="text-lg max-w-2xl mx-auto leading-relaxed"
             style={{ color: "oklch(0.80 0.02 250)" }}
-          >
+           data-cms-field={field("about.hero.subtitle")}>
             {t("about.hero.subtitle")}
           </p>
         </div>
@@ -85,19 +85,19 @@ export default function About() {
             <span
               className="fade-up text-xs font-bold uppercase tracking-widest"
               style={{ color: "oklch(0.72 0.16 75)" }}
-            >
+             data-cms-field={field("about.ulp.label")}>
               {t("about.ulp.label")}
             </span>
             <h2
               className="fade-up text-4xl md:text-5xl font-bold mt-3 mb-6"
               style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)", transitionDelay: "60ms" }}
-            >
+             data-cms-field={field("about.ulp.title")}>
               {t("about.ulp.title")}
             </h2>
             <p
               className="fade-up text-lg max-w-2xl mx-auto mb-6"
               style={{ color: "oklch(0.70 0.03 250)", transitionDelay: "120ms" }}
-            >
+             data-cms-field={field("about.ulp.body")}>
               {t("about.ulp.body")}
             </p>
             <a
@@ -126,7 +126,7 @@ export default function About() {
                   <div
                     className="absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-bold"
                     style={{ background: "oklch(0.72 0.16 75)", color: "oklch(0.14 0.06 250)" }}
-                  >
+                   data-cms-field={field("about.pillar.active")}>
                     {t("about.pillar.active")}
                   </div>
                 )}
@@ -162,13 +162,13 @@ export default function About() {
             <span
               className="fade-up text-xs font-bold uppercase tracking-widest"
               style={{ color: "oklch(0.72 0.16 75)" }}
-            >
+             data-cms-field={field("about.team.label")}>
               {t("about.team.label")}
             </span>
             <h2
               className="fade-up text-4xl md:text-5xl font-bold mt-3"
               style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)", transitionDelay: "60ms" }}
-            >
+             data-cms-field={field("about.team.title")}>
               {t("about.team.title")}
             </h2>
           </div>
@@ -191,18 +191,18 @@ export default function About() {
                   <h3
                     className="text-xl font-bold"
                     style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
-                  >
+                   data-cms-field={field("about.team.theo.name")}>
                     {t("about.team.theo.name")}
                   </h3>
                   <p
                     className="text-sm font-semibold mt-1"
                     style={{ color: "oklch(0.72 0.16 75)" }}
-                  >
+                   data-cms-field={field("about.team.theo.role")}>
                     {t("about.team.theo.role")}
                   </p>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.70 0.03 250)" }}>
+              <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.70 0.03 250)" }} data-cms-field={field("about.team.theo.bio")}>
                 {t("about.team.theo.bio")}
               </p>
               <div className="space-y-2">
@@ -241,18 +241,18 @@ export default function About() {
                   <h3
                     className="text-xl font-bold"
                     style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
-                  >
+                   data-cms-field={field("about.team.hans.name")}>
                     {t("about.team.hans.name")}
                   </h3>
                   <p
                     className="text-sm font-semibold mt-1"
                     style={{ color: "oklch(0.72 0.16 75)" }}
-                  >
+                   data-cms-field={field("about.team.hans.role")}>
                     {t("about.team.hans.role")}
                   </p>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.70 0.03 250)" }}>
+              <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.70 0.03 250)" }} data-cms-field={field("about.team.hans.bio")}>
                 {t("about.team.hans.bio")}
               </p>
               <a
@@ -367,19 +367,19 @@ export default function About() {
           <span
             className="fade-up text-xs font-bold uppercase tracking-widest"
             style={{ color: "oklch(0.72 0.16 75)" }}
-          >
+           data-cms-field={field("about.mission.label")}>
             {t("about.mission.label")}
           </span>
           <h2
             className="fade-up text-4xl md:text-6xl font-bold mt-4 mb-6 max-w-3xl mx-auto leading-tight"
             style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.97 0.01 250)", transitionDelay: "60ms" }}
-          >
+           data-cms-field={field("about.mission.title")}>
             {t("about.mission.title")}
           </h2>
           <p
             className="fade-up text-xl max-w-2xl mx-auto leading-relaxed"
             style={{ color: "oklch(0.80 0.02 250)", transitionDelay: "120ms" }}
-          >
+           data-cms-field={field("about.mission.body")}>
             {t("about.mission.body")}
           </p>
         </div>
