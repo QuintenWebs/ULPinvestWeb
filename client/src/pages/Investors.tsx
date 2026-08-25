@@ -9,7 +9,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const INVESTORS_IMG = "/images/woodworking.jpg";
 
 export default function Investors() {
-  const { t } = useLanguage();
+  const { t, field } = useLanguage();
   const revealRef = useScrollReveal();
 
   const whyItems = [
@@ -40,19 +40,19 @@ export default function Investors() {
             <span
               className="text-xs font-bold uppercase tracking-widest"
               style={{ color: "oklch(0.72 0.16 75)" }}
-            >
+             data-cms-field={field("inv.hero.label")}>
               {t("inv.hero.label")}
             </span>
             <h1
               className="text-4xl md:text-6xl font-bold mt-3 mb-6 leading-tight"
               style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.97 0.01 250)" }}
-            >
+             data-cms-field={field("inv.hero.title")}>
               {t("inv.hero.title")}
             </h1>
             <p
               className="text-lg mb-8 leading-relaxed"
               style={{ color: "oklch(0.80 0.02 250)" }}
-            >
+             data-cms-field={field("inv.hero.subtitle")}>
               {t("inv.hero.subtitle")}
             </p>
             <a
@@ -72,19 +72,19 @@ export default function Investors() {
             <span
               className="fade-up text-xs font-bold uppercase tracking-widest"
               style={{ color: "oklch(0.72 0.16 75)" }}
-            >
+             data-cms-field={field("inv.why.label")}>
               {t("inv.why.label")}
             </span>
             <h2
               className="fade-up text-4xl md:text-5xl font-bold mt-3 mb-6"
               style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)", transitionDelay: "60ms" }}
-            >
+             data-cms-field={field("inv.why.title")}>
               {t("inv.why.title")}
             </h2>
             <p
               className="fade-up text-lg max-w-2xl mx-auto"
               style={{ color: "oklch(0.70 0.03 250)", transitionDelay: "120ms" }}
-            >
+             data-cms-field={field("inv.why.body")}>
               {t("inv.why.body")}
             </p>
           </div>
@@ -124,20 +124,20 @@ export default function Investors() {
                 <span
                   className="fade-up text-xs font-bold uppercase tracking-widest"
                   style={{ color: "oklch(0.72 0.16 75)" }}
-                >
+                 data-cms-field={field("inv.risk.label")}>
                   {t("inv.risk.label")}
                 </span>
               </div>
               <h2
                 className="fade-up text-4xl md:text-5xl font-bold mt-3 mb-6 leading-tight"
                 style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)", transitionDelay: "60ms" }}
-              >
+               data-cms-field={field("inv.risk.title")}>
                 {t("inv.risk.title")}
               </h2>
               <p
                 className="fade-up text-lg leading-relaxed"
                 style={{ color: "oklch(0.75 0.03 250)", transitionDelay: "120ms" }}
-              >
+               data-cms-field={field("inv.risk.body")}>
                 {t("inv.risk.body")}
               </p>
             </div>
@@ -164,13 +164,13 @@ export default function Investors() {
             <span
               className="fade-up text-xs font-bold uppercase tracking-widest"
               style={{ color: "oklch(0.72 0.16 75)" }}
-            >
+             data-cms-field={field("invest.how")}>
               {t("invest.how")}
             </span>
             <h2
               className="fade-up text-4xl md:text-5xl font-bold mt-3"
               style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)", transitionDelay: "60ms" }}
-            >
+             data-cms-field={field("invest.three_ways")}>
               {t("invest.three_ways")}
             </h2>
           </div>
@@ -191,16 +191,16 @@ export default function Investors() {
               <span
                 className="text-xs font-bold uppercase tracking-widest mb-3"
                 style={{ color: "oklch(0.72 0.16 75)" }}
-              >
+               data-cms-field={field("inv.loan.label")}>
                 {t("inv.loan.label")}
               </span>
               <h3
                 className="text-2xl font-bold mb-4"
                 style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
-              >
+               data-cms-field={field("inv.loan.title")}>
                 {t("inv.loan.title")}
               </h3>
-              <p className="text-sm leading-relaxed mb-6 flex-grow" style={{ color: "oklch(0.70 0.03 250)" }}>
+              <p className="text-sm leading-relaxed mb-6 flex-grow" style={{ color: "oklch(0.70 0.03 250)" }} data-cms-field={field("inv.loan.body")}>
                 {t("inv.loan.body")}
               </p>
               <div className="space-y-2 mb-6">
@@ -217,7 +217,7 @@ export default function Investors() {
               <a
                 href="mailto:info@ulpinvest.nl?subject=Lening%20ULP%20Invest"
                 className="btn-outline-gold text-center text-sm"
-              >
+               data-cms-field={field("inv.loan.cta")}>
                 {t("inv.loan.cta")}
               </a>
             </div>
@@ -236,39 +236,39 @@ export default function Investors() {
               <span
                 className="text-xs font-bold uppercase tracking-widest mb-3"
                 style={{ color: "oklch(0.72 0.16 75)" }}
-              >
+               data-cms-field={field("inv.gift.label")}>
                 {t("inv.gift.label")}
               </span>
               <h3
                 className="text-2xl font-bold mb-4"
                 style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
-              >
+               data-cms-field={field("inv.gift.title")}>
                 {t("inv.gift.title")}
               </h3>
-              <p className="text-sm leading-relaxed mb-6 flex-grow" style={{ color: "oklch(0.70 0.03 250)" }}>
+              <p className="text-sm leading-relaxed mb-6 flex-grow" style={{ color: "oklch(0.70 0.03 250)" }} data-cms-field={field("inv.gift.body")}>
                 {t("inv.gift.body")}
               </p>
               <div
                 className="p-4 rounded-lg mb-6 space-y-2"
                 style={{ background: "oklch(0.26 0.055 250)" }}
               >
-                <p className="text-sm font-mono" style={{ color: "oklch(0.72 0.16 75)" }}>
+                <p className="text-sm font-mono" style={{ color: "oklch(0.72 0.16 75)" }} data-cms-field={field("inv.gift.iban")}>
                   {t("inv.gift.iban")}
                 </p>
-                <p className="text-xs" style={{ color: "oklch(0.65 0.04 250)" }}>
+                <p className="text-xs" style={{ color: "oklch(0.65 0.04 250)" }} data-cms-field={field("inv.gift.name")}>
                   {t("inv.gift.name")}
                 </p>
                 <p
                   className="text-xs font-semibold mt-2 pt-2 border-t"
                   style={{ color: "oklch(0.72 0.16 75)", borderColor: "oklch(1 0 0 / 10%)" }}
-                >
+                 data-cms-field={field("inv.gift.instruction")}>
                   {t("inv.gift.instruction")}
                 </p>
               </div>
               <a
                 href="mailto:info@ulpinvest.nl?subject=Gift%20ULP%20Invest"
                 className="btn-outline-gold text-center text-sm"
-              >
+               data-cms-field={field("invest.contact")}>
                 {t("invest.contact")}
               </a>
             </div>
@@ -287,16 +287,16 @@ export default function Investors() {
               <span
                 className="text-xs font-bold uppercase tracking-widest mb-3"
                 style={{ color: "oklch(0.72 0.16 75)" }}
-              >
+               data-cms-field={field("inv.coach.label")}>
                 {t("inv.coach.label")}
               </span>
               <h3
                 className="text-2xl font-bold mb-4"
                 style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
-              >
+               data-cms-field={field("inv.coach.title")}>
                 {t("inv.coach.title")}
               </h3>
-              <p className="text-sm leading-relaxed mb-6 flex-grow" style={{ color: "oklch(0.70 0.03 250)" }}>
+              <p className="text-sm leading-relaxed mb-6 flex-grow" style={{ color: "oklch(0.70 0.03 250)" }} data-cms-field={field("inv.coach.body")}>
                 {t("inv.coach.body")}
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
@@ -320,7 +320,7 @@ export default function Investors() {
               <a
                 href="mailto:info@ulpinvest.nl?subject=Coaching%20ULP%20Invest"
                 className="btn-outline-gold text-center text-sm"
-              >
+               data-cms-field={field("inv.coach.cta")}>
                 {t("inv.coach.cta")}
               </a>
             </div>

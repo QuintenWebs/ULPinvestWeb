@@ -12,7 +12,7 @@ const ENTREPRENEUR_IMG = "/images/coaching.jpg";
 const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/usambara-landscape-TxKRukdrenTyPFKVocwUJb.webp";
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, field } = useLanguage();
   const revealRef = useScrollReveal();
 
   const caseStudies = [
@@ -78,7 +78,7 @@ export default function Home() {
               <span
                 className="text-xs font-bold uppercase tracking-widest"
                 style={{ color: "oklch(0.72 0.16 75)" }}
-              >
+               data-cms-field={field("home.hero.label")}>
                 {t("home.hero.label")}
               </span>
             </div>
@@ -91,7 +91,7 @@ export default function Home() {
                 color: "oklch(0.97 0.01 250)",
                 whiteSpace: "pre-line"
               }}
-            >
+             data-cms-field={field("home.hero.title")}>
               {t("home.hero.title")}
             </h1>
 
@@ -99,7 +99,7 @@ export default function Home() {
             <p
               className="text-lg md:text-xl mb-10 max-w-xl leading-relaxed"
               style={{ color: "oklch(0.80 0.02 250)" }}
-            >
+             data-cms-field={field("home.hero.subtitle")}>
               {t("home.hero.subtitle")}
             </p>
 
@@ -126,7 +126,7 @@ export default function Home() {
               { value: "969,504,000", prefix: "TZS", label: t("home.stats.invested"), year: "2026" },
               { value: "3", label: t("home.stats.businesses") },
               { value: "2021", label: t("home.stats.founded") },
-              { value: t("home.stats.region.value"), label: t("home.stats.region") },
+              { value: t("home.stats.region.value"), label: t("home.stats.regionLabel") },
             ].map((stat, i) => (
               <div key={i}>
                 {'prefix' in stat && stat.prefix && (
@@ -186,20 +186,20 @@ export default function Home() {
                 <span
                   className="text-xs font-bold uppercase tracking-widest"
                   style={{ color: "oklch(0.72 0.16 75)" }}
-                >
+                 data-cms-field={field("home.whatwedo.label")}>
                   {t("home.whatwedo.label")}
                 </span>
               </div>
               <h2
                 className="fade-up text-4xl md:text-5xl font-bold mt-3 mb-6 leading-tight"
                 style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)", transitionDelay: "60ms" }}
-              >
+               data-cms-field={field("home.whatwedo.title")}>
                 {t("home.whatwedo.title")}
               </h2>
               <p
                 className="fade-up text-lg leading-relaxed mb-8"
                 style={{ color: "oklch(0.75 0.03 250)", transitionDelay: "120ms" }}
-              >
+               data-cms-field={field("home.whatwedo.body")}>
                 {t("home.whatwedo.body")}
               </p>
 
@@ -208,7 +208,7 @@ export default function Home() {
                 <p
                   className="text-xs font-bold uppercase tracking-widest mb-4"
                   style={{ color: "oklch(0.72 0.16 75)" }}
-                >
+                 data-cms-field={field("home.micro.label")}>
                   {t("home.micro.label")}
                 </p>
                 <ul className="space-y-3">
@@ -222,7 +222,7 @@ export default function Home() {
                 <p
                   className="mt-5 text-sm font-semibold"
                   style={{ color: "oklch(0.72 0.16 75)" }}
-                >
+                 data-cms-field={field("home.micro.range")}>
                   {t("home.micro.range")}
                 </p>
               </div>
@@ -241,13 +241,13 @@ export default function Home() {
             <span
               className="fade-up text-xs font-bold uppercase tracking-widest"
               style={{ color: "oklch(0.72 0.16 75)" }}
-            >
+             data-cms-field={field("home.why.label")}>
               {t("home.why.label")}
             </span>
             <h2
               className="fade-up text-4xl md:text-5xl font-bold mt-3"
               style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)", transitionDelay: "60ms" }}
-            >
+             data-cms-field={field("home.why.title")}>
               {t("home.why.title")}
             </h2>
           </div>
@@ -285,19 +285,19 @@ export default function Home() {
             <span
               className="fade-up text-xs font-bold uppercase tracking-widest"
               style={{ color: "oklch(0.72 0.16 75)" }}
-            >
+             data-cms-field={field("home.cases.label")}>
               {t("home.cases.label")}
             </span>
             <h2
               className="fade-up text-4xl md:text-5xl font-bold mt-3 mb-4"
               style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)", transitionDelay: "60ms" }}
-            >
+             data-cms-field={field("home.cases.title")}>
               {t("home.cases.title")}
             </h2>
             <p
               className="fade-up text-lg max-w-2xl"
               style={{ color: "oklch(0.70 0.03 250)", transitionDelay: "120ms" }}
-            >
+             data-cms-field={field("home.cases.subtitle")}>
               {t("home.cases.subtitle")}
             </p>
           </div>
@@ -321,7 +321,7 @@ export default function Home() {
                   <div
                     className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold"
                     style={{ background: "oklch(0.72 0.16 75)", color: "oklch(0.14 0.06 250)" }}
-                  >
+                   data-cms-field={field(`home.cases.${c.key}.tag`)}>
                     {t(`home.cases.${c.key}.tag`)}
                   </div>
                 </div>
@@ -329,17 +329,17 @@ export default function Home() {
                   <h3
                     className="text-xl font-bold mb-3"
                     style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
-                  >
+                   data-cms-field={field(`home.cases.${c.key}.title`)}>
                     {t(`home.cases.${c.key}.title`)}
                   </h3>
-                  <p className="text-sm leading-relaxed mb-4" style={{ color: "oklch(0.70 0.03 250)" }}>
+                  <p className="text-sm leading-relaxed mb-4" style={{ color: "oklch(0.70 0.03 250)" }} data-cms-field={field(`home.cases.${c.key}.desc`)}>
                     {t(`home.cases.${c.key}.desc`)}
                   </p>
                   <div
                     className="flex items-center justify-between pt-4 border-t text-xs font-semibold"
                     style={{ borderColor: "oklch(1 0 0 / 10%)" }}
                   >
-                    <span style={{ color: "oklch(0.65 0.04 250)" }}>{t("home.cases.investment")}</span>
+                    <span style={{ color: "oklch(0.65 0.04 250)" }} data-cms-field={field("home.cases.investment")}>{t("home.cases.investment")}</span>
                     <span style={{ color: "oklch(0.72 0.16 75)" }}>{c.investment}</span>
                   </div>
                 </div>
@@ -366,7 +366,7 @@ export default function Home() {
           <p
             className="fade-up text-3xl md:text-5xl font-bold mb-8 max-w-3xl mx-auto leading-tight"
             style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.97 0.01 250)" }}
-          >
+           data-cms-field={field("home.mission.quote")}>
             {t("home.mission.quote")}
           </p>
           <div className="fade-up flex flex-wrap justify-center gap-4" style={{ transitionDelay: "120ms" }}>
