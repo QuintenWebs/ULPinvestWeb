@@ -5,14 +5,13 @@
 import { ExternalLink, Mail, Phone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import content from "@/content.json";
+// Images are the same in every language, so they live once under shared.images
+// in content.json rather than per language. Editable in the Mirantic CMS.
+const images = content.shared.images;
 
-const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/usambara-landscape-TxKRukdrenTyPFKVocwUJb.webp";
 
 // Team member photos
-const ROSE_IMG = "/images/rose-henry-cole.jpg";
-const NASRA_IMG = "/images/nasra-kigombola.jpg";
-const HANS_IMG = "/images/hans-valkenburg.png";
-const THEO_IMG = "/images/theo-van-stuijvenberg.png";
 
 export default function About() {
   const { t, field } = useLanguage();
@@ -47,7 +46,8 @@ export default function About() {
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={LANDSCAPE_IMG}
+            src={images.aboutHeader}
+            data-cms-field="shared.images.aboutHeader"
             alt="Usambara Mountains"
             className="w-full h-full object-cover"
           />
@@ -182,7 +182,8 @@ export default function About() {
             >
               <div className="flex items-start gap-4 mb-6">
                 <img
-                  src={THEO_IMG}
+                  src={images.aboutTheo}
+                  data-cms-field="shared.images.aboutTheo"
                   alt="Theo van Stuijvenberg"
                   className="w-16 h-16 rounded-full object-cover flex-shrink-0"
                   style={{ objectPosition: "center top" }}
@@ -232,7 +233,8 @@ export default function About() {
             >
               <div className="flex items-start gap-4 mb-6">
                 <img
-                  src={HANS_IMG}
+                  src={images.aboutHans}
+                  data-cms-field="shared.images.aboutHans"
                   alt="Hans Valkenburg"
                   className="w-16 h-16 rounded-full object-cover flex-shrink-0"
                   style={{ objectPosition: "center top" }}
@@ -274,7 +276,8 @@ export default function About() {
             >
               <div className="flex items-start gap-4 mb-6">
                 <img
-                  src={ROSE_IMG}
+                  src={images.aboutRose}
+                  data-cms-field="shared.images.aboutRose"
                   alt="Rose Henry Cole"
                   className="w-16 h-16 rounded-full object-cover flex-shrink-0"
                   style={{ objectPosition: "center top" }}
@@ -313,7 +316,8 @@ export default function About() {
             >
               <div className="flex items-start gap-4 mb-6">
                 <img
-                  src={NASRA_IMG}
+                  src={images.aboutNasra}
+                  data-cms-field="shared.images.aboutNasra"
                   alt="Nasra Kigombola"
                   className="w-16 h-16 rounded-full object-cover flex-shrink-0"
                   style={{ objectPosition: "center top" }}
@@ -353,7 +357,8 @@ export default function About() {
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={LANDSCAPE_IMG}
+            src={images.aboutClosing}
+            data-cms-field="shared.images.aboutClosing"
             alt="Usambara Mountains"
             className="w-full h-full object-cover"
             style={{ objectPosition: "center 30%" }}

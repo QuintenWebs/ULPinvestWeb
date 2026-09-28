@@ -5,8 +5,11 @@
 import { ArrowRight, TrendingUp, Globe, Heart, Users, AlertTriangle, Plane } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import content from "@/content.json";
+// Images are the same in every language, so they live once under shared.images
+// in content.json rather than per language. Editable in the Mirantic CMS.
+const images = content.shared.images;
 
-const INVESTORS_IMG = "/images/woodworking.jpg";
 
 export default function Investors() {
   const { t, field } = useLanguage();
@@ -26,7 +29,8 @@ export default function Investors() {
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={INVESTORS_IMG}
+            src={images.investorsHero}
+            data-cms-field="shared.images.investorsHero"
             alt="Investment partnership"
             className="w-full h-full object-cover"
           />

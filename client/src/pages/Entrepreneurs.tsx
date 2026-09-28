@@ -6,9 +6,11 @@ import { Link } from "wouter";
 import { CheckCircle2, ArrowRight, Euro, Clock, TrendingUp, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import content from "@/content.json";
+// Images are the same in every language, so they live once under shared.images
+// in content.json rather than per language. Editable in the Mirantic CMS.
+const images = content.shared.images;
 
-const ENTREPRENEUR_IMG = "/images/coaching.jpg";
-const WOODWORKING_IMG = "/images/woodworking.jpg";
 
 export default function Entrepreneurs() {
   const { t, field } = useLanguage();
@@ -43,7 +45,8 @@ export default function Entrepreneurs() {
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={ENTREPRENEUR_IMG}
+            src={images.entrepreneursHero}
+            data-cms-field="shared.images.entrepreneursHero"
             alt="Tanzanian entrepreneur"
             className="w-full h-full object-cover object-top"
           />

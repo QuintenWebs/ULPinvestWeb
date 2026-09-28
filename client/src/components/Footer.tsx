@@ -5,6 +5,10 @@
 import { Link } from "wouter";
 import { Mail, Phone, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import content from "@/content.json";
+// Images are the same in every language, so they live once under shared.images
+// in content.json rather than per language. Editable in the Mirantic CMS.
+const images = content.shared.images;
 
 export default function Footer() {
   const { t, field } = useLanguage();
@@ -17,7 +21,8 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="https://www.ubuntuleadershipprogram.nl/wp-content/uploads/2025/04/ULPLOGO-2.png"
+                src={images.logo}
+                data-cms-field="shared.images.logo"
                 alt="ULP Logo"
                 className="h-12 w-auto"
                 style={{ filter: "brightness(0) invert(1)" }}

@@ -6,10 +6,11 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import content from "@/content.json";
+// Images are the same in every language, so they live once under shared.images
+// in content.json rather than per language. Editable in the Mirantic CMS.
+const images = content.shared.images;
 
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/hero-usambara-SLyqoHMyyESP8GyuTWMNBM.webp";
-const ENTREPRENEUR_IMG = "/images/coaching.jpg";
-const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663668553315/UCPcnffX9vjrwurBhixUZj/usambara-landscape-TxKRukdrenTyPFKVocwUJb.webp";
 
 export default function Home() {
   const { t, field } = useLanguage();
@@ -20,19 +21,16 @@ export default function Home() {
       key: "case1",
       icon: "🪵",
       investment: "€2.500",
-      image: "/images/woodworking.jpg",
     },
     {
       key: "case2",
       icon: "🏡",
       investment: "€3.000",
-      image: "/images/hospitality.webp",
     },
     {
       key: "case3",
       icon: "🌾",
       investment: "€1.800",
-      image: "/images/agriculture.webp",
     },
   ];
 
@@ -58,7 +56,8 @@ export default function Home() {
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <img
-            src={HERO_IMG}
+            src={images.homeHero}
+            data-cms-field="shared.images.homeHero"
             alt="Usambara Mountains Tanzania"
             className="w-full h-full object-cover"
           />
@@ -160,7 +159,8 @@ export default function Home() {
             <div className="fade-up order-2 lg:order-1">
               <div className="relative">
                 <img
-                  src={ENTREPRENEUR_IMG}
+                  src={images.homeEntrepreneur}
+                  data-cms-field="shared.images.homeEntrepreneur"
                   alt="Tanzanian entrepreneur"
                   className="w-full h-96 object-cover rounded-lg"
                   style={{ filter: "brightness(0.9)" }}
@@ -314,7 +314,8 @@ export default function Home() {
               >
                 <div className="relative h-52 overflow-hidden">
                   <img
-                    src={c.image}
+                    src={images.homeCases[i]}
+                    data-cms-field={`shared.images.homeCases[${i}]`}
                     alt={t(`home.cases.${c.key}.title`)}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
@@ -353,7 +354,8 @@ export default function Home() {
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={LANDSCAPE_IMG}
+            src={images.homeLandscape}
+            data-cms-field="shared.images.homeLandscape"
             alt="Usambara Mountains landscape"
             className="w-full h-full object-cover"
           />

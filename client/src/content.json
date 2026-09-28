@@ -769,5 +769,26 @@
       "contact": "Wasiliana nasi"
     },
     "homeLabel": "Nyumbani"
+  },
+  "shared": {
+    "images": {
+      "logo": "/images/ulp-logo.png",
+      "homeHero": "/images/usambara-farming.jpg",
+      "homeEntrepreneur": "/images/coaching.jpg",
+      "homeCases": [
+        "/images/woodworking.jpg",
+        "/images/hospitality.webp",
+        "/images/agriculture.webp"
+      ],
+      "homeLandscape": "/images/usambara-sunrise.jpg",
+      "entrepreneursHero": "/images/coaching.jpg",
+      "investorsHero": "/images/woodworking.jpg",
+      "aboutHeader": "/images/usambara-sunrise.jpg",
+      "aboutTheo": "/images/theo-van-stuijvenberg.png",
+      "aboutHans": "/images/hans-valkenburg.png",
+      "aboutRose": "/images/rose-henry-cole.jpg",
+      "aboutNasra": "/images/nasra-kigombola.jpg",
+      "aboutClosing": "/images/usambara-sunrise.jpg"
+    }
   }
 }

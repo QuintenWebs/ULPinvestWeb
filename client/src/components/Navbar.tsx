@@ -7,6 +7,10 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useLanguage, Language } from "@/contexts/LanguageContext";
+import content from "@/content.json";
+// Images are the same in every language, so they live once under shared.images
+// in content.json rather than per language. Editable in the Mirantic CMS.
+const images = content.shared.images;
 
 export default function Navbar() {
   const { lang, setLang, t, field } = useLanguage();
@@ -37,7 +41,8 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <img
-              src="https://www.ubuntuleadershipprogram.nl/wp-content/uploads/2025/04/ULPLOGO-2.png"
+              src={images.logo}
+              data-cms-field="shared.images.logo"
               alt="ULP Logo"
               className="h-10 w-auto"
               style={{ filter: "brightness(0) invert(1)" }}
