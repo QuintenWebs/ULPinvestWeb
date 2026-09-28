@@ -6,9 +6,12 @@ import { Link } from "wouter";
 import { Mail, Phone, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import content from "@/content.json";
+import { telHref } from "@/lib/utils";
 // Images are the same in every language, so they live once under shared.images
 // in content.json rather than per language. Editable in the Mirantic CMS.
 const images = content.shared.images;
+// Text that is the same in every language, editable in the Mirantic CMS.
+const text = content.shared.text.footer;
 
 export default function Footer() {
   const { t, field } = useLanguage();
@@ -30,20 +33,22 @@ export default function Footer() {
               <span
                 className="text-xl font-bold"
                 style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
+                data-cms-field="shared.text.footer.brand"
               >
-                ULP Invest
+                {text.brand}
               </span>
             </div>
             <p className="text-sm mb-2" style={{ color: "oklch(0.65 0.04 250)" }}>
-              {t("footer.part_of")}{" "}
+              <span data-cms-field={field("footer.part_of")}>{t("footer.part_of")}</span>{" "}
               <a
                 href="https://www.ubuntuleadershipprogram.nl/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-[oklch(0.72_0.16_75)] transition-colors"
                 style={{ color: "oklch(0.72 0.16 75)" }}
+                data-cms-field="shared.text.footer.ulpName"
               >
-                Ubuntu Leadership Program
+                {text.ulpName}
               </a>
             </p>
             <p
@@ -56,20 +61,20 @@ export default function Footer() {
             {/* Contact info */}
             <div className="mt-6 flex flex-col gap-2">
               <a
-                href="mailto:info@ulpinvest.nl"
+                href={`mailto:${text.email}`}
                 className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
                 style={{ color: "oklch(0.65 0.04 250)" }}
               >
                 <Mail size={14} />
-                info@ulpinvest.nl
+                <span data-cms-field="shared.text.footer.email">{text.email}</span>
               </a>
               <a
-                href="tel:+31629550134"
+                href={telHref(text.phone)}
                 className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
                 style={{ color: "oklch(0.65 0.04 250)" }}
               >
                 <Phone size={14} />
-                06 29550134 (Theo van Stuijvenberg)
+                <span data-cms-field="shared.text.footer.phone">{text.phone}</span>
               </a>
               <a
                 href="https://www.ubuntuleadershipprogram.nl/"
@@ -79,7 +84,7 @@ export default function Footer() {
                 style={{ color: "oklch(0.65 0.04 250)" }}
               >
                 <ExternalLink size={14} />
-                ubuntuleadershipprogram.nl
+                <span data-cms-field="shared.text.footer.website">{text.website}</span>
               </a>
             </div>
           </div>
@@ -94,13 +99,14 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-2">
               {[
-                { href: "/entrepreneurs", label: t("footer.entrepreneurs") },
-                { href: "/investors", label: t("footer.investors") },
-                { href: "/about", label: t("footer.about") },
+                { href: "/entrepreneurs", label: t("footer.entrepreneurs"), cmsField: field("footer.entrepreneurs") },
+                { href: "/investors", label: t("footer.investors"), cmsField: field("footer.investors") },
+                { href: "/about", label: t("footer.about"), cmsField: field("footer.about") },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    data-cms-field={link.cmsField}
                     className="text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
                     style={{ color: "oklch(0.65 0.04 250)" }}
                   >
@@ -116,14 +122,15 @@ export default function Footer() {
             <h4
               className="text-xs font-bold uppercase tracking-widest mb-4"
               style={{ color: "oklch(0.72 0.16 75)" }}
+              data-cms-field="shared.text.footer.ulpHeading"
             >
-              Ubuntu Leadership Program
+              {text.ulpHeading}
             </h4>
             <ul className="flex flex-col gap-2">
               {[
-                { href: "https://www.ubuntuleadershipprogram.nl/the-program/", label: t("footer.ulp.program") },
-                { href: "https://www.ubuntuleadershipprogram.nl/", label: "Business School" },
-                { href: "https://www.ubuntuleadershipprogram.nl/contact-us/", label: t("footer.ulp.contact") },
+                { href: "https://www.ubuntuleadershipprogram.nl/the-program/", label: t("footer.ulp.program"), cmsField: field("footer.ulp.program") },
+                { href: "https://www.ubuntuleadershipprogram.nl/", label: text.businessSchool, cmsField: "shared.text.footer.businessSchool" },
+                { href: "https://www.ubuntuleadershipprogram.nl/contact-us/", label: t("footer.ulp.contact"), cmsField: field("footer.ulp.contact") },
               ].map((link) => (
                 <li key={link.href}>
                   <a
@@ -133,7 +140,7 @@ export default function Footer() {
                     className="text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors flex items-center gap-1"
                     style={{ color: "oklch(0.65 0.04 250)" }}
                   >
-                    {link.label}
+                    <span data-cms-field={link.cmsField}>{link.label}</span>
                     <ExternalLink size={10} />
                   </a>
                 </li>
@@ -147,8 +154,12 @@ export default function Footer() {
           className="mt-12 pt-6 border-t flex flex-col sm:flex-row items-center justify-between gap-2 text-xs"
           style={{ color: "oklch(0.50 0.03 250)" }}
         >
-          <span>© {new Date().getFullYear()} ULP Invest – Stichting Ubuntu Leadership Program. {t("footer.rights")}</span>
-          <span>Usambara Mountains, Tanzania</span>
+          <span>
+            © {new Date().getFullYear()}{" "}
+            <span data-cms-field="shared.text.footer.legal">{text.legal}</span>{" "}
+            <span data-cms-field={field("footer.rights")}>{t("footer.rights")}</span>
+          </span>
+          <span data-cms-field="shared.text.footer.location">{text.location}</span>
         </div>
       </div>
     </footer>

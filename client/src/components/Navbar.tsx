@@ -11,6 +11,8 @@ import content from "@/content.json";
 // Images are the same in every language, so they live once under shared.images
 // in content.json rather than per language. Editable in the Mirantic CMS.
 const images = content.shared.images;
+// Text that is the same in every language, editable in the Mirantic CMS.
+const text = content.shared.text.nav;
 
 export default function Navbar() {
   const { lang, setLang, t, field } = useLanguage();
@@ -18,10 +20,10 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/investors", label: t("nav.investors") },
-    { href: "/entrepreneurs", label: t("nav.entrepreneurs") },
-    { href: "/about", label: t("nav.about") },
+    { href: "/", label: text.home, cmsField: "shared.text.nav.home" },
+    { href: "/investors", label: t("nav.investors"), cmsField: field("nav.investors") },
+    { href: "/entrepreneurs", label: t("nav.entrepreneurs"), cmsField: field("nav.entrepreneurs") },
+    { href: "/about", label: t("nav.about"), cmsField: field("nav.about") },
   ];
 
   const languages: { code: Language; label: string }[] = [
@@ -48,8 +50,8 @@ export default function Navbar() {
               style={{ filter: "brightness(0) invert(1)" }}
             />
             <div className="flex flex-col leading-tight hidden sm:block">
-              <span className="font-bold text-base tracking-wide" style={{ color: "oklch(0.95 0.01 250)", fontFamily: "'Fraunces', serif" }}>
-                ULP Invest
+              <span className="font-bold text-base tracking-wide" style={{ color: "oklch(0.95 0.01 250)", fontFamily: "'Fraunces', serif" }} data-cms-field="shared.text.nav.brand">
+                {text.brand}
               </span>
               <span className="text-xs" style={{ color: "oklch(0.65 0.04 250)" }} data-cms-field={field("nav.tagline")}>
                 {t("nav.tagline")}
@@ -63,6 +65,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
+                data-cms-field={link.cmsField}
                 className={`nav-link text-sm font-semibold tracking-wide uppercase ${location === link.href ? "active" : ""}`}
               >
                 {link.label}
@@ -113,6 +116,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
+                data-cms-field={link.cmsField}
                 onClick={() => setMobileOpen(false)}
                 className={`block px-4 py-3 rounded-lg text-sm font-semibold transition-colors ${
                   location === link.href

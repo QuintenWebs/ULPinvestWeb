@@ -9,6 +9,8 @@ import content from "@/content.json";
 // Images are the same in every language, so they live once under shared.images
 // in content.json rather than per language. Editable in the Mirantic CMS.
 const images = content.shared.images;
+// Text that is the same in every language (see shared.text in content.json).
+const sharedText = content.shared.text.investors;
 
 
 export default function Investors() {
@@ -16,10 +18,18 @@ export default function Investors() {
   const revealRef = useScrollReveal();
 
   const whyItems = [
-    { icon: TrendingUp, text: t("inv.why.item1") },
-    { icon: Users, text: t("inv.why.item2") },
-    { icon: Globe, text: t("inv.why.item3") },
-    { icon: Plane, text: t("inv.why.item4") },
+    { icon: TrendingUp, key: "inv.why.item1" },
+    { icon: Users, key: "inv.why.item2" },
+    { icon: Globe, key: "inv.why.item3" },
+    { icon: Plane, key: "inv.why.item4" },
+  ];
+
+  const coachTags = [
+    { text: sharedText.coachTagHospitality, cmsField: "shared.text.investors.coachTagHospitality" },
+    { text: sharedText.coachTagWoodworking, cmsField: "shared.text.investors.coachTagWoodworking" },
+    { text: sharedText.coachTagSme, cmsField: "shared.text.investors.coachTagSme" },
+    { text: t("tag.marketing"), cmsField: field("tag.marketing") },
+    { text: t("tag.administration"), cmsField: field("tag.administration") },
   ];
 
   return (
@@ -63,7 +73,7 @@ export default function Investors() {
               href="mailto:info@ulpinvest.nl?subject=Investering%20ULP%20Invest"
               className="btn-gold flex items-center gap-2 w-fit"
             >
-              {t("inv.hero.cta")} <ArrowRight size={16} />
+              <span data-cms-field={field("inv.hero.cta")}>{t("inv.hero.cta")}</span> <ArrowRight size={16} />
             </a>
           </div>
         </div>
@@ -109,8 +119,8 @@ export default function Investors() {
                 >
                   <item.icon size={20} style={{ color: "oklch(0.72 0.16 75)" }} />
                 </div>
-                <p className="text-sm font-semibold leading-snug" style={{ color: "oklch(0.80 0.02 250)" }}>
-                  {item.text}
+                <p className="text-sm font-semibold leading-snug" style={{ color: "oklch(0.80 0.02 250)" }} data-cms-field={field(item.key)}>
+                  {t(item.key)}
                 </p>
               </div>
             ))}
@@ -154,7 +164,7 @@ export default function Investors() {
                 className="text-2xl font-semibold italic leading-relaxed"
                 style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.85 0.02 250)" }}
               >
-                "{t("inv.risk.quote")}"
+                "<span data-cms-field={field("inv.risk.quote")}>{t("inv.risk.quote")}</span>"
               </p>
             </div>
           </div>
@@ -208,13 +218,13 @@ export default function Investors() {
                 {t("inv.loan.body")}
               </p>
               <div className="space-y-2 mb-6">
-                {[t("inv.loan.rate"), t("inv.loan.min"), t("inv.loan.pref")].map((item, i) => (
+                {["inv.loan.rate", "inv.loan.min", "inv.loan.pref"].map((item, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm">
                     <div
                       className="w-1.5 h-1.5 rounded-full flex-shrink-0"
                       style={{ background: "oklch(0.72 0.16 75)" }}
                     />
-                    <span style={{ color: "oklch(0.75 0.03 250)" }}>{item}</span>
+                    <span style={{ color: "oklch(0.75 0.03 250)" }} data-cms-field={field(item)}>{t(item)}</span>
                   </div>
                 ))}
               </div>
@@ -304,13 +314,14 @@ export default function Investors() {
                 {t("inv.coach.body")}
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {["Hospitality", "Woodworking", "SME", t("tag.marketing"), t("tag.administration")].map((tag) => (
+                {coachTags.map((tag) => (
                   <span
-                    key={tag}
+                    key={tag.text}
                     className="px-3 py-1 rounded-full text-xs font-semibold"
                     style={{ background: "oklch(0.72 0.16 75 / 0.15)", color: "oklch(0.72 0.16 75)" }}
+                    data-cms-field={tag.cmsField}
                   >
-                    {tag}
+                    {tag.text}
                   </span>
                 ))}
               </div>
@@ -319,7 +330,7 @@ export default function Investors() {
                 style={{ color: "oklch(0.65 0.04 250)" }}
               >
                 <Plane size={12} />
-                {t("inv.coach.visit")}
+                <span data-cms-field={field("inv.coach.visit")}>{t("inv.coach.visit")}</span>
               </div>
               <a
                 href="mailto:info@ulpinvest.nl?subject=Coaching%20ULP%20Invest"

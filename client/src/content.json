@@ -204,6 +204,12 @@
           "name": "Hans Valkenburg",
           "role": "Oprichter Ubuntu Leadership Program",
           "bio": "Hans is oprichter van het Ubuntu Leadership Program, de moederorganisatie van ULP Invest. Vanuit deze rol is hij betrokken bij de visie en strategie van ULP Invest en de ontwikkeling van ondernemerschap in Tanzania."
+        },
+        "rose": {
+          "role": "Business Coach"
+        },
+        "nasra": {
+          "role": "Field Officer"
         }
       },
       "pillar": {
@@ -461,6 +467,12 @@
           "name": "Hans Valkenburg",
           "role": "Founder Ubuntu Leadership Program",
           "bio": "Hans is the founder of the Ubuntu Leadership Program, the parent organization of ULP Invest. In this role, he is involved in the vision and strategy of ULP Invest and the development of entrepreneurship in Tanzania."
+        },
+        "rose": {
+          "role": "Business Coach"
+        },
+        "nasra": {
+          "role": "Field Officer"
         }
       },
       "pillar": {
@@ -718,6 +730,12 @@
           "name": "Hans Valkenburg",
           "role": "Mwanzilishi wa Programu ya Uongozi ya Ubuntu",
           "bio": "Hans ni mwanzilishi wa Programu ya Uongozi ya Ubuntu, shirika mama la ULP Invest. Katika jukumu hili, anahusika na maono na mkakati wa ULP Invest na maendeleo ya ujasiriamali Tanzania."
+        },
+        "rose": {
+          "role": "Business Coach"
+        },
+        "nasra": {
+          "role": "Field Officer"
         }
       },
       "pillar": {
@@ -789,6 +807,82 @@
       "aboutRose": "/images/rose-henry-cole.jpg",
       "aboutNasra": "/images/nasra-kigombola.jpg",
       "aboutClosing": "/images/usambara-sunrise.jpg"
+    },
+    "text": {
+      "nav": {
+        "home": "Home",
+        "brand": "ULP Invest"
+      },
+      "footer": {
+        "brand": "ULP Invest",
+        "ulpName": "Ubuntu Leadership Program",
+        "email": "info@ulpinvest.nl",
+        "phone": "06 29550134 (Theo van Stuijvenberg)",
+        "website": "ubuntuleadershipprogram.nl",
+        "ulpHeading": "Ubuntu Leadership Program",
+        "businessSchool": "Business School",
+        "legal": "ULP Invest – Stichting Ubuntu Leadership Program.",
+        "location": "Usambara Mountains, Tanzania"
+      },
+      "notFound": {
+        "code": "404",
+        "title": "Page Not Found",
+        "line1": "Sorry, the page you are looking for doesn't exist.",
+        "line2": "It may have been moved or deleted.",
+        "button": "Go Home"
+      },
+      "home": {
+        "stats": {
+          "invested": {
+            "value": "969,504,000",
+            "prefix": "TZS",
+            "year": "2026"
+          },
+          "businesses": {
+            "value": "3"
+          },
+          "founded": {
+            "value": "2021"
+          }
+        },
+        "cases": {
+          "case1": {
+            "investment": "€2.500"
+          },
+          "case2": {
+            "investment": "€3.000"
+          },
+          "case3": {
+            "investment": "€1.800"
+          }
+        }
+      },
+      "entrepreneurs": {
+        "termLabel": "Looptijd"
+      },
+      "investors": {
+        "coachTagHospitality": "Hospitality",
+        "coachTagWoodworking": "Woodworking",
+        "coachTagSme": "SME"
+      },
+      "about": {
+        "team": {
+          "theo": {
+            "email": "info@ulpinvest.nl"
+          },
+          "hans": {
+            "website": "ubuntuleadershipprogram.nl"
+          },
+          "rose": {
+            "name": "Rose Henry Cole",
+            "phone": "+255 622 007 120"
+          },
+          "nasra": {
+            "name": "Nasra Kigombola",
+            "phone": "+255 65 510 6424"
+          }
+        }
+      }
     }
   }
 }

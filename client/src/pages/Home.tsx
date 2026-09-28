@@ -10,6 +10,8 @@ import content from "@/content.json";
 // Images are the same in every language, so they live once under shared.images
 // in content.json rather than per language. Editable in the Mirantic CMS.
 const images = content.shared.images;
+// Figures that read the same in every language (amounts, years, currency).
+const sharedText = content.shared.text.home;
 
 
 export default function Home() {
@@ -20,17 +22,17 @@ export default function Home() {
     {
       key: "case1",
       icon: "🪵",
-      investment: "€2.500",
+      investment: sharedText.cases.case1.investment,
     },
     {
       key: "case2",
       icon: "🏡",
-      investment: "€3.000",
+      investment: sharedText.cases.case2.investment,
     },
     {
       key: "case3",
       icon: "🌾",
-      investment: "€1.800",
+      investment: sharedText.cases.case3.investment,
     },
   ];
 
@@ -105,11 +107,11 @@ export default function Home() {
             {/* CTAs */}
             <div className="flex flex-wrap gap-4">
               <Link href="/entrepreneurs" className="btn-gold flex items-center gap-2">
-                {t("home.hero.cta.entrepreneurs")}
+                <span data-cms-field={field("home.hero.cta.entrepreneurs")}>{t("home.hero.cta.entrepreneurs")}</span>
                 <ArrowRight size={16} />
               </Link>
               <Link href="/investors" className="btn-outline-gold flex items-center gap-2">
-                {t("home.hero.cta.investors")}
+                <span data-cms-field={field("home.hero.cta.investors")}>{t("home.hero.cta.investors")}</span>
                 <ArrowRight size={16} />
               </Link>
             </div>
@@ -122,14 +124,19 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: "969,504,000", prefix: "TZS", label: t("home.stats.invested"), year: "2026" },
-              { value: "3", label: t("home.stats.businesses") },
-              { value: "2021", label: t("home.stats.founded") },
-              { value: t("home.stats.region.value"), label: t("home.stats.regionLabel") },
+              {
+                value: sharedText.stats.invested.value, valueField: "shared.text.home.stats.invested.value",
+                prefix: sharedText.stats.invested.prefix, prefixField: "shared.text.home.stats.invested.prefix",
+                label: t("home.stats.invested"), labelField: field("home.stats.invested"),
+                year: sharedText.stats.invested.year, yearField: "shared.text.home.stats.invested.year",
+              },
+              { value: sharedText.stats.businesses.value, valueField: "shared.text.home.stats.businesses.value", label: t("home.stats.businesses"), labelField: field("home.stats.businesses") },
+              { value: sharedText.stats.founded.value, valueField: "shared.text.home.stats.founded.value", label: t("home.stats.founded"), labelField: field("home.stats.founded") },
+              { value: t("home.stats.region.value"), valueField: field("home.stats.region.value"), label: t("home.stats.regionLabel"), labelField: field("home.stats.regionLabel") },
             ].map((stat, i) => (
               <div key={i}>
                 {'prefix' in stat && stat.prefix && (
-                  <div className="text-sm font-bold uppercase tracking-widest mb-0.5" style={{ color: "oklch(0.20 0.06 250)" }}>
+                  <div className="text-sm font-bold uppercase tracking-widest mb-0.5" style={{ color: "oklch(0.20 0.06 250)" }} data-cms-field={stat.prefixField}>
                     {stat.prefix}
                   </div>
                 )}
@@ -137,12 +144,12 @@ export default function Home() {
                   className="text-3xl md:text-4xl font-bold mb-1 flex items-start justify-center gap-1"
                   style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.14 0.06 250)" }}
                 >
-                  <span>{stat.value}</span>
+                  <span data-cms-field={stat.valueField}>{stat.value}</span>
                   {'year' in stat && stat.year && (
-                    <sup className="text-xs font-semibold mt-1" style={{ color: "oklch(0.25 0.06 250)" }}>{stat.year}</sup>
+                    <sup className="text-xs font-semibold mt-1" style={{ color: "oklch(0.25 0.06 250)" }} data-cms-field={stat.yearField}>{stat.year}</sup>
                   )}
                 </div>
-                <div className="text-sm font-semibold uppercase tracking-wide" style={{ color: "oklch(0.25 0.06 250)" }}>
+                <div className="text-sm font-semibold uppercase tracking-wide" style={{ color: "oklch(0.25 0.06 250)" }} data-cms-field={stat.labelField}>
                   {stat.label}
                 </div>
               </div>
@@ -174,7 +181,7 @@ export default function Home() {
                     className="text-xl font-semibold italic"
                     style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.72 0.16 75)" }}
                   >
-                    "{t("home.whatwedo.quote")}"
+                    "<span data-cms-field={field("home.whatwedo.quote")}>{t("home.whatwedo.quote")}</span>"
                   </p>
                 </div>
               </div>
@@ -215,7 +222,7 @@ export default function Home() {
                   {microItems.map((item, i) => (
                     <li key={i} className="flex items-center gap-3">
                       <CheckCircle2 size={16} style={{ color: "oklch(0.72 0.16 75)", flexShrink: 0 }} />
-                      <span className="text-sm" style={{ color: "oklch(0.80 0.02 250)" }}>{item}</span>
+                      <span className="text-sm" style={{ color: "oklch(0.80 0.02 250)" }} data-cms-field={field(`home.micro.item${i + 1}`)}>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -269,7 +276,7 @@ export default function Home() {
                 >
                   0{i + 1}
                 </div>
-                <p className="text-sm font-semibold leading-snug" style={{ color: "oklch(0.85 0.02 250)" }}>
+                <p className="text-sm font-semibold leading-snug" style={{ color: "oklch(0.85 0.02 250)" }} data-cms-field={field(`home.why.item${i + 1}`)}>
                   {item}
                 </p>
               </div>
@@ -341,7 +348,7 @@ export default function Home() {
                     style={{ borderColor: "oklch(1 0 0 / 10%)" }}
                   >
                     <span style={{ color: "oklch(0.65 0.04 250)" }} data-cms-field={field("home.cases.investment")}>{t("home.cases.investment")}</span>
-                    <span style={{ color: "oklch(0.72 0.16 75)" }}>{c.investment}</span>
+                    <span style={{ color: "oklch(0.72 0.16 75)" }} data-cms-field={`shared.text.home.cases.${c.key}.investment`}>{c.investment}</span>
                   </div>
                 </div>
               </div>
@@ -373,10 +380,10 @@ export default function Home() {
           </p>
           <div className="fade-up flex flex-wrap justify-center gap-4" style={{ transitionDelay: "120ms" }}>
             <Link href="/entrepreneurs" className="btn-gold flex items-center gap-2">
-              {t("home.hero.cta.entrepreneurs")} <ArrowRight size={16} />
+              <span data-cms-field={field("home.hero.cta.entrepreneurs")}>{t("home.hero.cta.entrepreneurs")}</span>{" "}<ArrowRight size={16} />
             </Link>
             <Link href="/investors" className="btn-outline-gold flex items-center gap-2">
-              {t("home.hero.cta.investors")} <ArrowRight size={16} />
+              <span data-cms-field={field("home.hero.cta.investors")}>{t("home.hero.cta.investors")}</span>{" "}<ArrowRight size={16} />
             </Link>
           </div>
         </div>

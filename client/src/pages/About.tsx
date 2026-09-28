@@ -6,6 +6,7 @@ import { ExternalLink, Mail, Phone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import content from "@/content.json";
+import { telHref } from "@/lib/utils";
 // Images are the same in every language, so they live once under shared.images
 // in content.json rather than per language. Editable in the Mirantic CMS.
 const images = content.shared.images;
@@ -107,7 +108,7 @@ export default function About() {
               className="fade-up inline-flex items-center gap-2 text-sm font-semibold hover:underline"
               style={{ color: "oklch(0.72 0.16 75)", transitionDelay: "180ms" }}
             >
-              {t("about.ulp.link")} <ExternalLink size={14} />
+              <span data-cms-field={field("about.ulp.link")}>{t("about.ulp.link")}</span> <ExternalLink size={14} />
             </a>
           </div>
 
@@ -143,10 +144,11 @@ export default function About() {
                 <h3
                   className="text-xl font-bold mb-3"
                   style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
+                  data-cms-field={field(pillar.titleKey)}
                 >
                   {t(pillar.titleKey)}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.70 0.03 250)" }}>
+                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.70 0.03 250)" }} data-cms-field={field(pillar.descKey)}>
                   {t(pillar.descKey)}
                 </p>
               </div>
@@ -208,20 +210,20 @@ export default function About() {
               </p>
               <div className="space-y-2">
                 <a
-                  href="mailto:info@ulpinvest.nl"
+                  href={`mailto:${content.shared.text.about.team.theo.email}`}
                   className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
                   style={{ color: "oklch(0.65 0.04 250)" }}
                 >
                   <Mail size={14} />
-                  info@ulpinvest.nl
+                  <span data-cms-field="shared.text.about.team.theo.email">{content.shared.text.about.team.theo.email}</span>
                 </a>
                 <a
-                  href="tel:+31629550134"
+                  href={telHref(t("about.team.theo.phone"))}
                   className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
                   style={{ color: "oklch(0.65 0.04 250)" }}
                 >
                   <Phone size={14} />
-                  {t("about.team.theo.phone")}
+                  <span data-cms-field={field("about.team.theo.phone")}>{t("about.team.theo.phone")}</span>
                 </a>
               </div>
             </div>
@@ -265,7 +267,7 @@ export default function About() {
                 style={{ color: "oklch(0.65 0.04 250)" }}
               >
                 <ExternalLink size={14} />
-                ubuntuleadershipprogram.nl
+                <span data-cms-field="shared.text.about.team.hans.website">{content.shared.text.about.team.hans.website}</span>
               </a>
             </div>
 
@@ -286,25 +288,25 @@ export default function About() {
                   <h3
                     className="text-xl font-bold"
                     style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
-                  >
-                    Rose Henry Cole
+                   data-cms-field="shared.text.about.team.rose.name">
+                    {content.shared.text.about.team.rose.name}
                   </h3>
                   <p
                     className="text-sm font-semibold mt-1"
                     style={{ color: "oklch(0.72 0.16 75)" }}
-                  >
-                    Business Coach
+                   data-cms-field={field("about.team.rose.role")}>
+                    {t("about.team.rose.role")}
                   </p>
                 </div>
               </div>
               <div className="space-y-2">
                 <a
-                  href="tel:+255622007120"
+                  href={telHref(content.shared.text.about.team.rose.phone)}
                   className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
                   style={{ color: "oklch(0.65 0.04 250)" }}
                 >
                   <Phone size={14} />
-                  +255 622 007 120
+                  <span data-cms-field="shared.text.about.team.rose.phone">{content.shared.text.about.team.rose.phone}</span>
                 </a>
               </div>
             </div>
@@ -326,25 +328,25 @@ export default function About() {
                   <h3
                     className="text-xl font-bold"
                     style={{ fontFamily: "'Fraunces', serif", color: "oklch(0.95 0.01 250)" }}
-                  >
-                    Nasra Kigombola
+                   data-cms-field="shared.text.about.team.nasra.name">
+                    {content.shared.text.about.team.nasra.name}
                   </h3>
                   <p
                     className="text-sm font-semibold mt-1"
                     style={{ color: "oklch(0.72 0.16 75)" }}
-                  >
-                    Field Officer
+                   data-cms-field={field("about.team.nasra.role")}>
+                    {t("about.team.nasra.role")}
                   </p>
                 </div>
               </div>
               <div className="space-y-2">
                 <a
-                  href="tel:+255655106424"
+                  href={telHref(content.shared.text.about.team.nasra.phone)}
                   className="flex items-center gap-2 text-sm hover:text-[oklch(0.72_0.16_75)] transition-colors"
                   style={{ color: "oklch(0.65 0.04 250)" }}
                 >
                   <Phone size={14} />
-                  +255 65 510 6424
+                  <span data-cms-field="shared.text.about.team.nasra.phone">{content.shared.text.about.team.nasra.phone}</span>
                 </a>
               </div>
             </div>

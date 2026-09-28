@@ -10,6 +10,8 @@ import content from "@/content.json";
 // Images are the same in every language, so they live once under shared.images
 // in content.json rather than per language. Editable in the Mirantic CMS.
 const images = content.shared.images;
+// Text that is the same in every language (see shared.text in content.json).
+const sharedText = content.shared.text.entrepreneurs;
 
 
 export default function Entrepreneurs() {
@@ -17,26 +19,28 @@ export default function Entrepreneurs() {
   const revealRef = useScrollReveal();
 
   const whoItems = [
-    t("ent.who.item1"),
-    t("ent.who.item2"),
-    t("ent.who.item3"),
-    t("ent.who.item4"),
+    "ent.who.item1",
+    "ent.who.item2",
+    "ent.who.item3",
+    "ent.who.item4",
   ];
 
   const supportItems = [
-    t("ent.support.item1"),
-    t("ent.support.item2"),
-    t("ent.support.item3"),
-    t("ent.support.item4"),
-    t("ent.support.item5"),
+    "ent.support.item1",
+    "ent.support.item2",
+    "ent.support.item3",
+    "ent.support.item4",
+    "ent.support.item5",
   ];
 
   const loanHighlights = [
-    { icon: Euro, value: t("ent.loan.amount"), label: t("ent.loan.label") },
-    { icon: Clock, value: t("ent.loan.term"), label: "Looptijd" },
-    { icon: TrendingUp, value: t("ent.loan.early"), label: "" },
-    { icon: Users, value: t("ent.loan.rate"), label: "" },
+    { icon: Euro, value: t("ent.loan.amount"), valueField: field("ent.loan.amount"), label: t("ent.loan.label"), labelField: field("ent.loan.label") },
+    { icon: Clock, value: t("ent.loan.term"), valueField: field("ent.loan.term"), label: sharedText.termLabel, labelField: "shared.text.entrepreneurs.termLabel" },
+    { icon: TrendingUp, value: t("ent.loan.early"), valueField: field("ent.loan.early"), label: "", labelField: "" },
+    { icon: Users, value: t("ent.loan.rate"), valueField: field("ent.loan.rate"), label: "", labelField: "" },
   ];
+
+  const supportTags = ["tag.businessplan", "tag.administration", "tag.legal", "tag.marketing", "tag.network"];
 
   return (
     <div ref={revealRef} className="min-h-screen pt-20" style={{ background: "oklch(0.18 0.06 250)" }}>
@@ -79,7 +83,7 @@ export default function Entrepreneurs() {
               href="mailto:info@ulpinvest.nl?subject=Aanvraag%20ULP%20Invest"
               className="btn-gold flex items-center gap-2 w-fit"
             >
-              {t("ent.hero.cta")} <ArrowRight size={16} />
+              <span data-cms-field={field("ent.hero.cta")}>{t("ent.hero.cta")}</span> <ArrowRight size={16} />
             </a>
           </div>
         </div>
@@ -123,8 +127,8 @@ export default function Entrepreneurs() {
                   >
                     <CheckCircle2 size={16} style={{ color: "oklch(0.72 0.16 75)" }} />
                   </div>
-                  <p className="text-sm leading-relaxed" style={{ color: "oklch(0.80 0.02 250)" }}>
-                    {item}
+                  <p className="text-sm leading-relaxed" style={{ color: "oklch(0.80 0.02 250)" }} data-cms-field={field(item)}>
+                    {t(item)}
                   </p>
                 </div>
               ))}
@@ -170,11 +174,12 @@ export default function Entrepreneurs() {
                 <p
                   className="text-lg font-bold mb-1"
                   style={{ color: "oklch(0.72 0.16 75)", fontFamily: "'Fraunces', serif" }}
+                  data-cms-field={item.valueField}
                 >
                   {item.value}
                 </p>
                 {item.label && (
-                  <p className="text-xs uppercase tracking-wide" style={{ color: "oklch(0.65 0.04 250)" }}>
+                  <p className="text-xs uppercase tracking-wide" style={{ color: "oklch(0.65 0.04 250)" }} data-cms-field={item.labelField}>
                     {item.label}
                   </p>
                 )}
@@ -228,7 +233,7 @@ export default function Entrepreneurs() {
                         {i + 1}
                       </span>
                     </div>
-                    <span className="text-sm" style={{ color: "oklch(0.80 0.02 250)" }}>{item}</span>
+                    <span className="text-sm" style={{ color: "oklch(0.80 0.02 250)" }} data-cms-field={field(item)}>{t(item)}</span>
                   </li>
                 ))}
               </ul>
@@ -253,13 +258,14 @@ export default function Entrepreneurs() {
                   {t("tag.incubator.desc")}
                 </p>
                 <div className="space-y-3">
-                  {[t("tag.businessplan"), t("tag.administration"), t("tag.legal"), t("tag.marketing"), t("tag.network")].map((tag) => (
+                  {supportTags.map((tag) => (
                     <span
-                      key={tag}
+                      key={t(tag)}
                       className="inline-block mr-2 mb-2 px-3 py-1 rounded-full text-xs font-semibold"
                       style={{ background: "oklch(0.72 0.16 75 / 0.15)", color: "oklch(0.72 0.16 75)" }}
+                      data-cms-field={field(tag)}
                     >
-                      {tag}
+                      {t(tag)}
                     </span>
                   ))}
                 </div>
@@ -302,7 +308,7 @@ export default function Entrepreneurs() {
               transitionDelay: "180ms"
             }}
           >
-            {t("ent.apply.cta")} <ArrowRight size={20} />
+            <span data-cms-field={field("ent.apply.cta")}>{t("ent.apply.cta")}</span> <ArrowRight size={20} />
           </a>
         </div>
       </section>
