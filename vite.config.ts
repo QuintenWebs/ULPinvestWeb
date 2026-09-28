@@ -3,9 +3,9 @@ import react from "@vitejs/plugin-react";
 import path from "node:path";
 import { defineConfig } from "vite";
 
-// The Manus site-builder plugins (runtime, debug log collector, storage proxy,
-// JSX source locations) were removed: they only served the Manus editor, and
-// the runtime alone inlined ~370 KB into every production page.
+// Built with the Manus site builder originally; its plugins (runtime, debug log
+// collector, storage proxy, JSX source locations) served only the Manus editor
+// and were removed.
 const plugins = [react(), tailwindcss()];
 
 export default defineConfig({
@@ -13,8 +13,6 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
   envDir: path.resolve(import.meta.dirname),
