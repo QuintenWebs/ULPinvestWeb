@@ -10,6 +10,8 @@
  *   - live preview of pending edits (text + images) without reloading
  *   - live preview of brand-new blog posts (cloned from a template node)
  *   - adding and removing items in lists marked with data-cms-list
+ *   - formatted text (bold, italic, underline, links, the site's text styles)
+ *     in elements marked data-cms-rich
  *
  * Editable elements are marked with data-cms-field="path.to.value" matching
  * keys in content.json. Lists of repeating items (a team, partners) can be
@@ -33,8 +35,33 @@
   window.addEventListener("message", onHostMessage);
 
   function announceReady() {
-    post({ source: "cms-bridge", type: "ready" });
+    post({ source: "cms-bridge", type: "ready", path: currentPath() });
   }
+
+  function currentPath() {
+    return location.pathname + location.search;
+  }
+
+  // Single-page sites change page without reloading, so report every
+  // navigation; the CMS shows the current page in its address bar.
+  (function watchLocation() {
+    var last = currentPath();
+    function check() {
+      var now = currentPath();
+      if (now === last) return;
+      last = now;
+      post({ source: "cms-bridge", type: "location", path: now });
+    }
+    ["pushState", "replaceState"].forEach(function (name) {
+      var original = history[name];
+      history[name] = function () {
+        var result = original.apply(this, arguments);
+        check();
+        return result;
+      };
+    });
+    window.addEventListener("popstate", check);
+  })();
 
   function post(msg) {
     try {
@@ -123,18 +150,158 @@
       } else {
         el.style.backgroundImage = str ? 'url("' + str + '")' : "";
       }
+    } else if (el.hasAttribute("data-cms-rich")) {
+      renderRich(el, str);
     } else {
       el.textContent = str;
     }
   }
 
   function readElementValue(el) {
+    if (el.hasAttribute("data-cms-rich")) return toRich(el).trim();
     if (el.tagName === "IMG") return el.getAttribute("src") || "";
     if (el.hasAttribute("data-cms-image")) {
       var m = (el.style.backgroundImage || "").match(/url\(["']?(.*?)["']?\)/);
       return m ? m[1] : "";
     }
     return (el.textContent || "").trim();
+  }
+
+  // ── Formatted text ────────────────────────────────────────────────────
+  // Same small format the site's <Rich> helper renders, and nothing more:
+  //   **bold**  *italic*  __underline__  [text](url)  \* for a literal *
+  //   a leading "# ", "## ", "### " or "-# " picks one of the site's text styles
+  // The site publishes its styles as window.__CMS_TEXT_STYLES__
+  // ({ "#": { label, style } }, style in React/camelCase form).
+  var STYLE_MARKERS = ["###", "##", "#", "-#"];
+
+  function textStyles() {
+    return window.__CMS_TEXT_STYLES__ || {};
+  }
+
+  function safeHref(url) {
+    return /^(https?:|mailto:|tel:|\/|#)/i.test(url) ? url : null;
+  }
+
+  function parseRich(src) {
+    var style = null;
+    for (var s = 0; s < STYLE_MARKERS.length; s++) {
+      if (src.indexOf(STYLE_MARKERS[s] + " ") === 0) {
+        style = STYLE_MARKERS[s];
+        src = src.slice(style.length + 1);
+        break;
+      }
+    }
+    return { style: style, nodes: parseInline(src, 0, null).nodes };
+  }
+
+  // Returns { nodes, end }. Nodes are strings or { tag, children, href }.
+  function parseInline(src, i, closer) {
+    var nodes = [];
+    var text = "";
+    function flush() {
+      if (text) nodes.push(text);
+      text = "";
+    }
+    while (i < src.length) {
+      if (closer && src.startsWith(closer, i)) {
+        flush();
+        return { nodes: nodes, end: i + closer.length, closed: true };
+      }
+      var ch = src[i];
+      if (ch === "\\" && i + 1 < src.length) {
+        text += src[i + 1];
+        i += 2;
+        continue;
+      }
+      var opener = src.startsWith("**", i) ? "**" : src.startsWith("__", i) ? "__" : ch === "*" ? "*" : null;
+      if (opener) {
+        var inner = parseInline(src, i + opener.length, opener);
+        if (inner.closed && inner.nodes.length) {
+          flush();
+          nodes.push({ tag: opener === "**" ? "strong" : opener === "__" ? "u" : "em", children: inner.nodes });
+          i = inner.end;
+          continue;
+        }
+      }
+      if (ch === "[") {
+        var close = src.indexOf("](", i);
+        var end = close === -1 ? -1 : src.indexOf(")", close + 2);
+        var href = end === -1 ? null : safeHref(src.slice(close + 2, end));
+        if (href) {
+          flush();
+          nodes.push({ tag: "a", href: href, children: parseInline(src.slice(i + 1, close), 0, null).nodes });
+          i = end + 1;
+          continue;
+        }
+      }
+      text += ch;
+      i++;
+    }
+    flush();
+    return { nodes: nodes, end: i, closed: false };
+  }
+
+  function buildNodes(parent, nodes) {
+    nodes.forEach(function (n) {
+      if (typeof n === "string") {
+        parent.appendChild(document.createTextNode(n));
+        return;
+      }
+      var el = document.createElement(n.tag);
+      if (n.tag === "a") {
+        el.setAttribute("href", n.href);
+        if (/^https?:/i.test(n.href)) {
+          el.setAttribute("target", "_blank");
+          el.setAttribute("rel", "noopener noreferrer");
+        }
+      }
+      buildNodes(el, n.children);
+      parent.appendChild(el);
+    });
+  }
+
+  function renderRich(el, src) {
+    var parsed = parseRich(src);
+    el.textContent = "";
+    var target = el;
+    if (parsed.style && textStyles()[parsed.style]) {
+      target = document.createElement("span");
+      target.setAttribute("data-cms-style", parsed.style);
+      var css = textStyles()[parsed.style].style || {};
+      Object.keys(css).forEach(function (k) {
+        target.style[k] = css[k];
+      });
+      el.appendChild(target);
+    }
+    buildNodes(target, parsed.nodes);
+  }
+
+  // DOM → format, for text typed or formatted (Cmd+B/I/U) on the page.
+  function escapeRich(s) {
+    // Only what the parser would read as markup: a lone "_" is plain text.
+    return s.replace(/[\\*[\]]/g, "\\$&").replace(/__/g, "\\_\\_");
+  }
+
+  function toRich(el) {
+    var out = "";
+    el.childNodes.forEach(function (n) {
+      if (n.nodeType === 3) {
+        out += escapeRich(n.textContent);
+      } else if (n.nodeType === 1) {
+        var tag = n.tagName;
+        var inner = toRich(n);
+        if (n.classList && n.classList.contains("cms-list-control")) return;
+        if (tag === "STRONG" || tag === "B") out += inner ? "**" + inner + "**" : "";
+        else if (tag === "EM" || tag === "I") out += inner ? "*" + inner + "*" : "";
+        else if (tag === "U") out += inner ? "__" + inner + "__" : "";
+        else if (tag === "A" && safeHref(n.getAttribute("href") || "")) out += "[" + inner + "](" + n.getAttribute("href") + ")";
+        else if (tag === "BR") out += " ";
+        else if (n.hasAttribute("data-cms-style")) out += n.getAttribute("data-cms-style") + " " + inner;
+        else out += inner;
+      }
+    });
+    return out;
   }
 
   function fieldTypeOf(el) {
@@ -241,6 +408,10 @@
       field: el.getAttribute("data-cms-field"),
       value: readElementValue(el),
       fieldType: fieldTypeOf(el),
+      rich: el.hasAttribute("data-cms-rich"),
+      textStyles: Object.keys(textStyles()).map(function (marker) {
+        return { marker: marker, label: textStyles()[marker].label };
+      }),
     });
   }
 
@@ -255,12 +426,18 @@
     selectedEl = el;
     el.classList.add("cms-selected");
     if (fieldTypeOf(el) !== "text") return;
-    try {
-      el.contentEditable = "plaintext-only";
-    } catch (e) {
+    if (el.hasAttribute("data-cms-rich")) {
+      // Formatting allowed (Cmd+B/I/U); pasted content still arrives as plain text.
       el.contentEditable = "true";
+      el.addEventListener("paste", onRichPaste);
+    } else {
+      try {
+        el.contentEditable = "plaintext-only";
+      } catch (e) {
+        el.contentEditable = "true";
+      }
+      if (el.contentEditable !== "plaintext-only") el.contentEditable = "true";
     }
-    if (el.contentEditable !== "plaintext-only") el.contentEditable = "true";
     el.addEventListener("input", onSelectedInput);
     el.addEventListener("keydown", onSelectedKeydown);
     el.focus({ preventScroll: true });
@@ -278,6 +455,7 @@
     selectedEl = null;
     el.classList.remove("cms-selected");
     el.removeEventListener("input", onSelectedInput);
+    el.removeEventListener("paste", onRichPaste);
     el.removeEventListener("keydown", onSelectedKeydown);
     if (el.isContentEditable) {
       el.removeAttribute("contenteditable");
@@ -306,11 +484,56 @@
     if (!selectedEl) return;
     var field = selectedEl.getAttribute("data-cms-field");
     // Keep other copies of the same field (e.g. a repeated label) in step.
-    applyValue(field, selectedEl.textContent, "text");
-    post({ source: "cms-bridge", type: "field-input", field: field, value: selectedEl.textContent });
+    var value = readElementValue(selectedEl);
+    applyValue(field, value, "text");
+    post({ source: "cms-bridge", type: "field-input", field: field, value: value });
+  }
+
+  // Wrap the selection in <strong>/<em>/<u>, or unwrap it when it is already
+  // inside one. Done by hand rather than with execCommand, which bases its
+  // toggle on how the text *looks* (a heading that is bold by design gets
+  // "un-bolded" with an inline style the format can't express).
+  var SAME_TAGS = { STRONG: ["STRONG", "B"], EM: ["EM", "I"], U: ["U"] };
+
+  function toggleInline(root, tag) {
+    var sel = window.getSelection();
+    if (!sel || !sel.rangeCount) return;
+    var range = sel.getRangeAt(0);
+    if (!root.contains(range.commonAncestorContainer)) return;
+    var node = range.commonAncestorContainer;
+    for (var n = node.nodeType === 1 ? node : node.parentElement; n && n !== root; n = n.parentElement) {
+      if (SAME_TAGS[tag].indexOf(n.tagName) !== -1) {
+        var parent = n.parentNode;
+        while (n.firstChild) parent.insertBefore(n.firstChild, n);
+        parent.removeChild(n);
+        parent.normalize();
+        return;
+      }
+    }
+    if (range.collapsed) return;
+    var wrapper = document.createElement(tag.toLowerCase());
+    wrapper.appendChild(range.extractContents());
+    range.insertNode(wrapper);
+    sel.removeAllRanges();
+    var after = document.createRange();
+    after.selectNodeContents(wrapper);
+    sel.addRange(after);
+  }
+
+  function onRichPaste(e) {
+    e.preventDefault();
+    var text = (e.clipboardData && e.clipboardData.getData("text/plain")) || "";
+    document.execCommand("insertText", false, text.replace(/\s*\n\s*/g, " "));
   }
 
   function onSelectedKeydown(e) {
+    var mod = e.metaKey || e.ctrlKey;
+    if (mod && selectedEl.hasAttribute("data-cms-rich") && /^[biu]$/i.test(e.key)) {
+      e.preventDefault();
+      toggleInline(selectedEl, { b: "STRONG", i: "EM", u: "U" }[e.key.toLowerCase()]);
+      onSelectedInput();
+      return;
+    }
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       post({ source: "cms-bridge", type: "field-commit", field: selectedEl.getAttribute("data-cms-field") });
