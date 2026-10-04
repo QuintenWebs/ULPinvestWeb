@@ -80,7 +80,7 @@
       case "init":
         enableEditing();
         (data.listAdds || []).forEach(function (a) {
-          addListItem(a.tempId, a.list, a.index, a.item);
+          addListItem(a.tempId, a.list, a.index, a.item, a.after);
         });
         (data.listRemoves || []).forEach(function (r) {
           setListItemRemoved(r.list, r.index, true);
@@ -112,7 +112,7 @@
         removeBlogPost(data.tempId);
         break;
       case "apply-list-add":
-        addListItem(data.tempId, data.list, data.index, data.item);
+        addListItem(data.tempId, data.list, data.index, data.item, data.after);
         refreshListControls();
         break;
       case "remove-list-add":
@@ -321,6 +321,7 @@
       hideImageOverlay();
       deselect();
     }
+    if (!on) hideGhost();
     refreshListControls();
   }
 
@@ -329,6 +330,7 @@
     if (listenersAttached) return;
     listenersAttached = true;
     document.addEventListener("mouseover", onMouseOver, true);
+    document.addEventListener("mouseover", onListHover, true);
     document.addEventListener("mouseout", onMouseOut, true);
     document.addEventListener("click", onClick, true);
     window.addEventListener("scroll", positionImageOverlay, true);
@@ -617,7 +619,8 @@
   // inside it an element with data-cms-item="<index>". Optional on the
   // container: data-cms-list-label ("team member") and data-cms-list-new, the
   // JSON object a new item starts as. In edit mode every item gets a remove
-  // button and the list an add button; the CMS records the change and previews
+  // button, and hovering an item shows a placeholder right after it: clicking
+  // that adds a new item in that spot. The CMS records the change and previews
   // it here (a new item is a copy of an existing one, filled with the defaults).
   function listContainer(list) {
     return document.querySelector('[data-cms-list="' + cssEscape(list) + '"]');
@@ -644,12 +647,13 @@
     return hit ? cellOf(container, hit) : null;
   }
 
-  function addListItem(tempId, list, index, item) {
+  function addListItem(tempId, list, index, item, after) {
     removeListItemClone(tempId);
     var container = listContainer(list);
     if (!container) return;
     var items = itemsOf(container);
     if (!items.length) return;
+    var anchor = after == null ? null : findItem(list, after);
     var templateItem = items[items.length - 1];
     var oldIndex = templateItem.getAttribute("data-cms-item");
     var cell = cellOf(container, templateItem).cloneNode(true);
@@ -678,7 +682,8 @@
       setElementValue(el, value, fieldTypeOf(el));
       if (el.tagName === "IMG") el.setAttribute("alt", (item && item.name) || "");
     });
-    container.appendChild(cell);
+    if (anchor && anchor.parentNode === container) container.insertBefore(cell, anchor.nextSibling);
+    else container.appendChild(cell);
   }
 
   function removeListItemClone(tempId) {
@@ -730,14 +735,66 @@
           if (tempId) remove.setAttribute("data-cms-temp-id", tempId);
           itemEl.appendChild(remove);
         });
-        var add = document.createElement("button");
-        add.type = "button";
-        add.className = "cms-list-control cms-list-add";
-        add.textContent = "+ Add " + label;
-        add.setAttribute("data-cms-list-action", "add");
-        add.setAttribute("data-cms-list-path", list);
-        container.parentNode.insertBefore(add, container.nextSibling);
+        // Items are added from the placeholder that appears when hovering
+        // one; only an empty list needs a button to get started.
+        if (itemsOf(container).length === 0) {
+          var add = document.createElement("button");
+          add.type = "button";
+          add.className = "cms-list-control cms-list-add";
+          add.textContent = "+ Add " + label;
+          add.setAttribute("data-cms-list-action", "add");
+          add.setAttribute("data-cms-list-path", list);
+          container.appendChild(add);
+        }
       });
+  }
+
+  // ── "Add here" placeholder ──
+  // Hovering an item (briefly, so sweeping across a list doesn't make it jump)
+  // puts a dashed placeholder right after it, the size of an item. Moving onto
+  // the placeholder keeps it; clicking it adds a new item in exactly that spot.
+  var ghost = null;
+  var ghostTimer = null;
+
+  function onListHover(e) {
+    if (!editMode) return;
+    var target = e.target;
+    if (ghost && (target === ghost || ghost.contains(target))) {
+      clearTimeout(ghostTimer);
+      return;
+    }
+    var itemEl = target.closest && target.closest("[data-cms-item]");
+    var container = itemEl && itemEl.closest("[data-cms-list]");
+    var cell = container && cellOf(container, itemEl);
+    clearTimeout(ghostTimer);
+    if (!cell || cell.hasAttribute("data-cms-removed")) {
+      ghostTimer = setTimeout(hideGhost, 300);
+      return;
+    }
+    if (ghost && ghost.previousSibling === cell) return;
+    ghostTimer = setTimeout(function () {
+      showGhost(container, cell, itemEl);
+    }, 220);
+  }
+
+  function showGhost(container, cell, itemEl) {
+    hideGhost();
+    var label = container.getAttribute("data-cms-list-label") || "item";
+    ghost = document.createElement("button");
+    ghost.type = "button";
+    ghost.className = "cms-list-control cms-list-ghost";
+    ghost.setAttribute("data-cms-list-action", "add");
+    ghost.setAttribute("data-cms-list-path", container.getAttribute("data-cms-list"));
+    ghost.setAttribute("data-cms-list-after", itemEl.getAttribute("data-cms-item"));
+    ghost.style.minHeight = cell.getBoundingClientRect().height + "px";
+    ghost.innerHTML = '<span class="cms-list-ghost-plus">+</span><span></span>';
+    ghost.lastChild.textContent = "Add " + label + " here";
+    container.insertBefore(ghost, cell.nextSibling);
+  }
+
+  function hideGhost() {
+    if (ghost && ghost.parentNode) ghost.parentNode.removeChild(ghost);
+    ghost = null;
   }
 
   function onListControl(control) {
@@ -750,7 +807,15 @@
       } catch (e) {
         /* fall back to an empty item */
       }
-      post({ source: "cms-bridge", type: "list-add", list: list, item: defaults });
+      var after = control.getAttribute("data-cms-list-after");
+      hideGhost();
+      post({
+        source: "cms-bridge",
+        type: "list-add",
+        list: list,
+        item: defaults,
+        after: after == null ? null : Number(after),
+      });
     } else {
       post({
         source: "cms-bridge",
@@ -784,7 +849,14 @@
       "background:#fff;color:#b42318;border-color:#b42318;opacity:0;transition:opacity .15s;}" +
       "[data-cms-item]:hover>.cms-list-remove{opacity:1;}" +
       ".cms-list-add{display:block;margin:16px 0;padding:10px 16px;background:" + ACCENT +
-      ";color:#fff;}";
+      ";color:#fff;}" +
+      ".cms-list-ghost{display:flex;flex-direction:column;align-items:center;justify-content:center;" +
+      "gap:8px;width:100%;border:2px dashed " + ACCENT + ";border-radius:10px;" +
+      "background:rgba(74,111,165,0.06);color:" + ACCENT + ";font-size:13px;" +
+      "animation:cms-fade-in .15s ease-out;}" +
+      ".cms-list-ghost:hover{background:rgba(74,111,165,0.14);}" +
+      ".cms-list-ghost-plus{font-size:28px;font-weight:300;line-height:1;}" +
+      "@keyframes cms-fade-in{from{opacity:0}to{opacity:1}}";
     var style = document.createElement("style");
     style.textContent = css;
     document.head.appendChild(style);
